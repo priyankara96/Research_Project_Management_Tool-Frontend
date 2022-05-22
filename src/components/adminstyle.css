@@ -1,0 +1,27 @@
+.con{
+  background-image:'';
+  
+}
+.box{
+    background-color: #ffffe6;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 10px;
+  }
+  .topic{
+     color: red;
+      text-decoration: underline;
+      text-shadow: 5px;
+      text-align: center;
+  }
+  .boxs{
+    background-color: #ffffe6;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 10px;
+    width: 300px;
+  }
