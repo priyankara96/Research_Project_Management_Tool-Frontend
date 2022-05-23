@@ -1,0 +1,81 @@
+.memberContainer {
+  width: 530px;
+  border: 3px solid black;
+  float: left;
+  display: block;
+  margin: 5%;
+  margin-top: 1%;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  height: 450px;
+}
+
+.submitbutton {
+  margin-top: 5px;
+  width: 140px;
+  height: 40px;
+  margin-bottom: 30px;
+  margin-right: 50px;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 6px;
+}
+.resetBtn {
+  margin-top: 5px;
+  width: 140px;
+  height: 40px;
+  margin-bottom: 30px;
+  margin-right: 50px;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 6px;
+}
+.updttButton {
+  margin-top: 5px;
+  width: 140px;
+  height: 40px;
+  margin-bottom: 30px;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 6px;
+  display: inline-block;
+}
+.dlttButton {
+  margin-top: 5px;
+  width: 140px;
+  height: 40px;
+  margin-bottom: 30px;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 6px;
+  background-color: red;
+  border-color: red;
+  display: inline-block;
+}
+.dlttButton:hover {
+  background-color: lightcoral;
+  border-color: lightcoral;
+}
+.dlttButton::selection {
+  background-color: red;
+  border-color: red;
+}
+
+.groupContainer {
+  margin-left: 9%;
+}
+.memberContainer .ant-form-item-label {
+  margin-right: 10px;
+  margin-left: 10px;
+  align-items: left;
+}
+.memberContainer .ant-input {
+  width: 250px;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+.note {
+  color: red;
+}
