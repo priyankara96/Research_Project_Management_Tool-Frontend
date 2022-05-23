@@ -96,37 +96,31 @@ export const SidebarItemsAdmin = [
     },
     {
         title: "Add a new vacancy",
-        path: "/addcareere",
+        path: "/",
         icon: <FaIcons.FaArrowAltCircleRight />,
         className: "nav-text"
     },
     {
         title: "Update & Delete vacancy",
-        path: "/updatedelete",
+        path: "/",
         icon: <FaIcons.FaArrowAltCircleRight />,
         className: "nav-text"
     },
     {
         title: "Delete Career Requests",
-        path: "/deleteRequest",
+        path: "/",
         icon: <FaIcons.FaArrowAltCircleRight />,
         className: "nav-text"
     },
     {
         title: "Genarate Report",
-        path: "/jobreport",
+        path: "/",
         icon: <FaIcons.FaArrowAltCircleRight />,
         className: "nav-text"
     },
     {
         title: "Authentication Management",
-        path: "/lecmanagement",
-        className: "nav-text2"
-    },
-
-    {
-        title: "Finance Management",
-        path: "/financeanalysis",
+        path: "/",
         className: "nav-text2"
     },
 
