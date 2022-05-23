@@ -24,10 +24,7 @@ export default function MainRouter() {
   return (
     // <Router>
     //   <Routes>
-    //     <Route path="/Register" element={<Register />} />
-    //     <Route path="/UpdateUsers" element={<UpdateUsers />} />
-    //     <Route path="/Evaluate" element={<Evaluate />} />
-    //     <Route path="/Topic" element={<Topic />} />
+
 
     <BrowserRouter>
       {/* Chanduni */}
