@@ -25,13 +25,13 @@ function Header() {
               <a href="/">
                 About
               </a>
-              <a href="/">
+              <a href="/login">
                 My Courses
               </a>
-              <a href="/">
+              <a href="/login">
                 Resources
               </a>
-              <a href="/">
+              <a href="/login">
                 Libraries
               </a>
               <a href="/">
@@ -70,7 +70,7 @@ function Header() {
               <a href="/">
                 Contact Us
               </a>
-              <a href="/login" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
+              <a href="/home1" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
             </ul>
           </div>
         </div>
@@ -103,7 +103,7 @@ function Header() {
               <a href="/">
                 Contact Us
               </a>
-              <a href="/login" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
+              <a href="/home1" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
             </ul>
           </div>
         </div>
@@ -136,7 +136,7 @@ function Header() {
               <a href="/">
                 Contact Us
               </a>
-              <a href="/login" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
+              <a href="/home1" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
             </ul>
           </div>
         </div>
