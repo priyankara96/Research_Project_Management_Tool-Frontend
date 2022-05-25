@@ -6,10 +6,24 @@ import AdminSlider from "./SliderAdmin";
 import logo from "../images/CourseWeb.jpg";
 import useUser from "../services/UserContext";
 import { AiOutlineLogin } from "react-icons/ai";
+import useRequest from "../services/RequestContext";
+import { useHistory } from "react-router-dom";
 
 function Header() {
   const { user } = useUser();
   console.log("User", user);
+
+  const { updateToken } = useRequest();
+  const { setUser } = useUser();
+
+  const history = useHistory();
+  const logout = async () => {
+    await updateToken();
+    setUser({});
+
+    history.push("/login");
+    window.location.reload(true);
+  }; 
 
   if (user == undefined) {
     return (
@@ -37,7 +51,8 @@ function Header() {
               <a href="/">
                 Contact Us
               </a>
-              <a href="/login" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
+              <a href="/home1" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
+              <button onClick={logout}>Logout</button>
             </ul>
           </div>
         </div>
@@ -71,6 +86,7 @@ function Header() {
                 Contact Us
               </a>
               <a href="/home1" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
+              <button onClick={logout}>Logout</button>
             </ul>
           </div>
         </div>
@@ -104,6 +120,7 @@ function Header() {
                 Contact Us
               </a>
               <a href="/home1" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
+              <button onClick={logout}>Logout</button>
             </ul>
           </div>
         </div>
@@ -137,6 +154,7 @@ function Header() {
                 Contact Us
               </a>
               <a href="/home1" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
+              <button onClick={logout}>Logout</button>
             </ul>
           </div>
         </div>
