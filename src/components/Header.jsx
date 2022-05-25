@@ -52,7 +52,7 @@ function Header() {
                 Contact Us
               </a>
               <a href="/home1" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
-              <button onClick={logout}>Logout</button>
+              <button type="button" class="btn btn-outline-secondary" onClick={logout}>Logout</button>
             </ul>
           </div>
         </div>
@@ -86,7 +86,7 @@ function Header() {
                 Contact Us
               </a>
               <a href="/home1" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
-              <button onClick={logout}>Logout</button>
+              <button type="button" class="btn btn-outline-secondary" onClick={logout}>Logout</button>
             </ul>
           </div>
         </div>
@@ -120,7 +120,7 @@ function Header() {
                 Contact Us
               </a>
               <a href="/home1" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
-              <button onClick={logout}>Logout</button>
+              <button type="button" class="btn btn-outline-secondary" onClick={logout}>Logout</button>
             </ul>
           </div>
         </div>
@@ -154,7 +154,7 @@ function Header() {
                 Contact Us
               </a>
               <a href="/home1" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineLogin /> </a>
-              <button onClick={logout}>Logout</button>
+              <button type="button" class="btn btn-outline-secondary" onClick={logout}>Logout</button>
             </ul>
           </div>
         </div>
