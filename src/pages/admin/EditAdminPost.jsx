@@ -85,82 +85,83 @@ export default class EditAdminPost extends Component {
     render() {
     return (
    
-        <div>
-     
-         
-        <div className="card"
-          style={{ width: "80%" }}
-        // style={{marginRight:"5%"}}
-        >
-          <div className="cardedit">
-            <div className="col-md-8 mt-4 mx-auto">
-              <h1 className="h3 mb-3 font-weight-normal adminletter text-center"> Edit Form </h1>
-              <form className="needs-validation" >
-                <div className="form-group" style={{ marginBottom: '15px' }}>
-                  <label style={{ marginBottom: '5px' }} >Topic: </label>
-                  <input type="text"
+      <div className='container'>
+      <h1 className="text-center">Add a Notice</h1>
+    
+      <button  className="btn btn-success btnback">
+          <i class="material-icons">navigate_before</i>
+          <a href="/admin"style={{ textDecoration: 'none', color: 'white' }}>
+              Back
+              </a></button>
+        <div className="card1 card" style={{width:'600px'}}>
+        <form className="row g-3 needs-validation form1" noValidate>
+              <div class="card-body">
+                <div className="form-group" style={{ marginBottom: "15px" }}>
+                  <label style={{ marginBottom: "5px" }}>Topic: </label>
+                  <input
+                    type="text"
                     className="form-control"
                     name="topic"
                     placeholder="Enter Topic"
                     value={this.state.topic}
-                    onChange={this.handleInputChange} />
+                    onChange={this.handleInputChange}
+                  />
                 </div>
 
-
-                <label style={{ marginBottom: '5px' }} >Desciption: </label>
-                <div class="row">
-                  <div class="col">
-                    <input type="text"
-                      className="form-control"
-                      name="body"
-                      placeholder="Description"
-                      value={this.state.body}
-                      onChange={this.handleInputChange} />
-                  </div>
+                <div className="form-group" style={{ marginBottom: "15px" }}>
+                  <label style={{ marginBottom: "5px" }}>Description: </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="body"
+                    placeholder="Enter Sleep "
+                    value={this.state.body}
+                    onChange={this.handleInputChange}
+                  />
                 </div>
 
-                <div className="form-group" style={{marginBottom:'15px'}}>
-          <label style={{marginBottom:'5px'}}>Other</label>
-          <input type="text"
-          className="form-control"
-          name="other"
-          placeholder="Other"
-          value={this.state.other}
-          onChange={this.handleInputChange}/>
-        </div>
-
-                <label style={{ marginBottom: '5px' }} >Date: </label>
-                <div class="row">
-                  <div class="col">
-                    <input type="date"
-                      className="form-control"
-                      name="date"
-                      placeholder="parent type"
-                      value={this.state.date}
-                      onChange={this.handleInputChange} />
-                  </div>
+                <div className="form-group" style={{ marginBottom: "15px" }}>
+                  <label style={{ marginBottom: "5px" }}>Other: </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="other"
+                    placeholder="Other "
+                    value={this.state.other}
+                    onChange={this.handleInputChange}
+                  />
                 </div>
 
-             
-              <br />
-              <br />
-                <div className="text-center">
-                <button className="btn btn-primary" type="submit" style={{ marginTop: '15px' }} onClick={this.onSubmit}>
-                  <i className="far fa-check-square"></i>
-                  &nbsp; Update
-                </button>
+                <div className="form-group" style={{ marginBottom: "15px" }}>
+                  <label style={{ marginBottom: "5px" }}>Date: </label>
+                  <input
+                    type="date"
+                    className="form-control"
+                    name="date"
+                    placeholder="Enter Date"
+                    value={this.state.date}
+                    onChange={this.handleInputChange}
+                  />
                 </div>
-                </form>
+
                 <br />
+
                 <br />
-             
-            </div>
+              </div>
+            </form>
           </div>
-        </div>
-        
-      
-      
-    </div>
+          <div className='btnAlign'>
+          <button
+              className="btn btn-success "
+              type="submit"
+              style={{ marginTop: "15px" }}
+              onClick={this.onSubmit}
+            >
+                 <i class="material-icons">check</i>
+              &nbsp; Update
+            </button>
+          </div>
+          </div>
   
     )
   }

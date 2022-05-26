@@ -3,7 +3,6 @@ import axios from 'axios'
 import './adminstyle.css';
 
 
-
 export default class NoticeHome extends Component {
 constructor(props){
 super(props);
@@ -62,6 +61,8 @@ onDelete=(id)=>{
         <br/>
         <br/>
         </div>
+       
+       
         <div className='row'>
           <div className='col-10'>
             
@@ -75,10 +76,11 @@ onDelete=(id)=>{
 
                 ))}
 </div>
-<div className='col-2'>
+<div className='col-1'>
 <div className='boxs'>
   <h4>Support & Contact</h4>
-  <br/>
+  <hr/>
+
   <i class="material-icons">phone</i>  &nbsp; +94000000001 &nbsp;<br/>
   
   <i class="material-icons">email</i> &nbsp;support@sliit.lk &nbsp;<br/>
@@ -91,7 +93,8 @@ onDelete=(id)=>{
 <br/>
 <div className='boxs'>
   <h4>Research Procedure</h4>
-  <br/>
+  <hr/>
+
   <h6>1. Group Rgistration</h6>
   <h6>2. Request for Supervisor and Co-supervisor</h6>
   <h6>3. Register Topic</h6>
@@ -101,6 +104,7 @@ onDelete=(id)=>{
 </div>
 </div>
         </div>
+        <button><a href='/aaa'>Hi</a> </button>
       </div>
     )
   }
