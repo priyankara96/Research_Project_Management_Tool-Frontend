@@ -26,11 +26,13 @@ import ChatApp from "./components/ChatApp";
 
 // Chanduni
 
-// Nipuna
+/ Nipuna
 import Mailer from "./pages/Email/emailer";
 import addpanel from "./pages/staff/addpanel";
 import addform from "./pages/StaffForm/addform";
 import edit from "./pages/staffedit/edit";
+import addpanelmember from "./pages/PanelMembers/addpanelmember";
+import panelmembertable from "./pages/PanelMembers/panelmembertable";
 // import fileupload from "./pages/fileupload/fileupload";
 
 // Erandi
@@ -76,13 +78,13 @@ export default class MainRouter extends Component {
   
               {/* End - Chanduni */}
 
-              {/* Nipuna */}
+             {/* Nipuna */}
               <Route path='/Mailer' exact component={Mailer} ></Route>
               <Route path='/Panel' exact component={addpanel}></Route>
               <Route path='/staff/add' exact component={addform}></Route>
               <Route path='/staff/edit/:id' exact component={edit}></Route>
-              {/* <Route path='/file' exact component={fileupload}></Route> */}
-
+              <Route path='/addpanelmember' exact component={addpanelmember} ></Route>
+              <Route path='/paneltable' exact component={panelmembertable} ></Route>
               {/* Erandi */}
                   <Route path="/CreateGroup" exact component={CreateGroup} />
                   <Route path="/ViewGroup/:id" exact component={ViewGroup} />
