@@ -28,3 +28,10 @@
     box-shadow: 10px;
     width: 250px;
   }
+  .general{
+    max-width: cover;
+    max-height: 600px;
+    background-color: whitesmoke;
+    text-decoration: underline;
+    padding: 5px;
+  }

@@ -54,20 +54,43 @@ handleInputChange = (e) =>{
   }
 
   }
+  demo =() => { 
+
+    //setState
+    this.setState ({
+      topic :"Group Registration"
+    })
+    this.setState ({
+      body:"Must have 4 members in each group. Appoint a leader and register Your group. Registration can be done only for the Leader. Registartion link is avaible below"
+    })
+  
+    this.setState ({
+      date:2/3/2022
+    }) 
+  
+    this.setState ({
+      other:"LIC"
+    }) 
+  
+  }
  
     render() {
     return (
       <div className='container'>
-           <button  className="btn btn-success btnback">
+          
+      <h1 className="text-center">Add a Notice</h1>
+      <button  className="btn btn-success btnback">
           <i class="material-icons">navigate_before</i>
           <a href="/admin"style={{ textDecoration: 'none', color: 'white' }}>
               Back
               </a></button>
-              <br/>
-              <br/>
-      <h1 className="text-center">Add a Notice</h1>
     
-   
+              <div className="row">
+                <div className="col-3">
+              <img src= 'https://www.pngall.com/wp-content/uploads/5/Hotel-Transparent.png' style={{width:'600px'}}/>
+              </div>
+              <div className="col-9">
+          <div className="align">
         <div className="card1 card" style={{width:'600px'}}>
         <form className="row g-3 needs-validation form1" noValidate>
               <div class="card-body">
@@ -89,7 +112,7 @@ handleInputChange = (e) =>{
                     type="text"
                     className="form-control"
                     name="body"
-                    placeholder="Enter Sleep "
+                    placeholder="Enter Description "
                     value={this.state.body}
                     onChange={this.handleInputChange}
                   />
@@ -124,8 +147,7 @@ handleInputChange = (e) =>{
                 <br />
               </div>
             </form>
-          </div>
-          <div className='btnAlign'>
+            <div className='btnAlign'>
           <button
               className="btn btn-success "
               type="submit"
@@ -136,6 +158,17 @@ handleInputChange = (e) =>{
               &nbsp; Submit
             </button>
           </div>
+          <div className="btnAlign">
+          <br/>
+        <button type="button" className="btn btn-outline-dark btn-sm btnAlign" onClick={this.demo} > Demo </button>
+        <br/>
+        <br/>
+        </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          
 
           <br/>
           <br/>
@@ -143,6 +176,7 @@ handleInputChange = (e) =>{
           <br/>
           <br/>
           </div>
+        
           
 
        

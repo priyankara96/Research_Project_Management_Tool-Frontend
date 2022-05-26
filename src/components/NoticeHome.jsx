@@ -61,8 +61,9 @@ onDelete=(id)=>{
         <br/>
         <br/>
         </div>
-       
-       
+ <div className='general'>
+        <h4>General Notices</h4></div>
+        <br/>
         <div className='row'>
           <div className='col-10'>
             
@@ -76,6 +77,7 @@ onDelete=(id)=>{
 
                 ))}
 </div>
+
 <div className='col-1'>
 <div className='boxs'>
   <h4>Support & Contact</h4>
@@ -103,8 +105,14 @@ onDelete=(id)=>{
   <h6>6. Get Marking</h6>
 </div>
 </div>
+<hr/>
+<div className='general'>
+<h4>UseFul Links</h4></div>
         </div>
-        <button><a href='/aaa'>Hi</a> </button>
+        <br/>
+        <i class="material-icons">group</i> <h6> <a href="/CreateGroup">Group Registration</a></h6>  &nbsp;
+        <i class="material-icons">group</i> <h6> <a href="/">Marking Scheme</a></h6>  &nbsp;
+    
       </div>
     )
   }
