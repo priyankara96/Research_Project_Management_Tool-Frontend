@@ -70,7 +70,7 @@ export default class MainRouter extends Component {
                   <Route path='/admin/add' exact component={CreateAdminPost}></Route>
                   <Route path='/admin/edit/:id' exact component={EditAdminPost}></Route>
                   <Route path='/admin/:id' exact component={AdminPostDetails}></Route>
-                  <Route path='/' exact component={NoticeHome}></Route>
+                  <Route path='/Notice' exact component={NoticeHome}></Route>
                   <Route path='/chat' exact component={ChatApp}></Route>
                
   
