@@ -51,7 +51,7 @@ function Header() {
               <a href="/ContactUs">
                 Contact Us
               </a>
-              <button type="button" class="btn btn-outline-secondary" onClick={logout}><AiOutlineLogin />&nbsp; Logout</button>
+              <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
           </div>
         </div>
@@ -84,7 +84,7 @@ function Header() {
               <a href="/">
                 Contact Us
               </a>
-              <button type="button" class="btn btn-outline-secondary" onClick={logout}><AiOutlineLogin />&nbsp; Logout</button>
+              <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
           </div>
         </div>
@@ -117,7 +117,7 @@ function Header() {
               <a href="/">
                 Contact Us
               </a>
-              <button type="button" class="btn btn-outline-secondary" onClick={logout}><AiOutlineLogin />&nbsp; Logout</button>
+              <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
           </div>
         </div>
@@ -150,7 +150,7 @@ function Header() {
               <a href="/">
                 Contact Us
               </a>
-              <button type="button" class="btn btn-outline-secondary" onClick={logout}><AiOutlineLogin />&nbsp; Logout</button>
+              <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
           </div>
         </div>
