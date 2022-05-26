@@ -22,6 +22,8 @@ import CreateAdminPost from "./pages/admin/CreateAdminPost";
 import EditAdminPost from "./pages/admin/EditAdminPost";
 import AdminPostDetails from "./pages/admin/AdminPostDetails";
 import NoticeHome from "./components/NoticeHome";
+import ChatApp from "./components/ChatApp";
+
 // Chanduni
 
 // Nipuna
@@ -67,6 +69,8 @@ export default class MainRouter extends Component {
                   <Route path='/admin/edit/:id' exact component={EditAdminPost}></Route>
                   <Route path='/admin/:id' exact component={AdminPostDetails}></Route>
                   <Route path='/' exact component={NoticeHome}></Route>
+                  <Route path='/chat' exact component={ChatApp}></Route>
+               
   
               {/* End - Chanduni */}
 
