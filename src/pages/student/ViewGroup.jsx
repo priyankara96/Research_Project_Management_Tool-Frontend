@@ -67,7 +67,7 @@ export default function ViewGroup() {
       if (result) {
         Swal.fire(
           "Successful!",
-          "Your Have Successfully Registered Your Research Group.",
+          "Your Have Successfully Updated Your Research Group.",
           "success"
         );
       }
