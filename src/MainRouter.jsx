@@ -22,9 +22,17 @@ import AdminPostDetails from "./pages/admin/AdminPostDetails";
 import NoticeHome from "./components/NoticeHome";
 // Chanduni
 
+// Nipuna
+import Mailer from "./pages/Email/emailer";
+import addpanel from "./pages/staff/addpanel";
+import addform from "./pages/StaffForm/addform";
+import edit from "./pages/staffedit/edit";
+// import fileupload from "./pages/fileupload/fileupload";
+
 // Erandi
 import CreateGroup from "./pages/student/CreateGroup";
 import ViewGroup from "./pages/student/ViewGroup";
+
 // Erandi
 
 
@@ -57,6 +65,13 @@ export default class MainRouter extends Component {
                   <Route path='/' exact component={NoticeHome}></Route>
   
               {/* End - Chanduni */}
+
+              {/* Nipuna */}
+              <Route path='/Mailer' exact component={Mailer} ></Route>
+              <Route path='/Panel' exact component={addpanel}></Route>
+              <Route path='/staff/add' exact component={addform}></Route>
+              <Route path='/staff/edit/:id' exact component={edit}></Route>
+              {/* <Route path='/file' exact component={fileupload}></Route> */}
 
               {/* Erandi */}
                   <Route path="/CreateGroup" exact component={CreateGroup} />
