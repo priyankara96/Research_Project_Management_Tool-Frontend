@@ -12,6 +12,8 @@ import CreateUsers from "./pages/AuthenticationManagement/CreateUsers";
 import SignupStudent from "./pages/AuthenticationManagement/SignupStudent";
 import SignupLecturer from "./pages/AuthenticationManagement/SignupLecturer";
 import Profile from "./pages/AuthenticationManagement/Profile";
+
+import AdminDashboard from "./components/AdminDashboard";
 // Priyankara
 
 // Chanduni
@@ -54,6 +56,8 @@ export default class MainRouter extends Component {
               <Route path="/SignupStudent" exact component={SignupStudent} />
               <Route path="/SignupLecturer" exact component={SignupLecturer} />
               <Route path="/Profile" exact component={Profile} />
+
+              <Route path="/AdminDashboard" exact component={AdminDashboard} />
               {/* End - Priyankara */}
 
 
