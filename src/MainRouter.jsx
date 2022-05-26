@@ -37,6 +37,8 @@ import edit from "./pages/staffedit/edit";
 import CreateGroup from "./pages/student/CreateGroup";
 import ViewGroup from "./pages/student/ViewGroup";
 
+import Submissions from "./pages/student/Submissions";
+
 // Erandi
 
 
@@ -84,6 +86,7 @@ export default class MainRouter extends Component {
               {/* Erandi */}
                   <Route path="/CreateGroup" exact component={CreateGroup} />
                   <Route path="/ViewGroup/:id" exact component={ViewGroup} />
+                  <Route path="/Submissions" exact component={Submissions} />
               {/* Erandi */}
 
              

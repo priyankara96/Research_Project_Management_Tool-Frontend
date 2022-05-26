@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Input, Button } from "antd";
 import { useHistory } from "react-router-dom";
-import axios from "axios";
+import useRequest from "../../services/RequestContext";
+import useUser from "../../services/UserContext";
 import "antd/dist/antd.css";
 import "./Student.css";
 import Swal from "sweetalert2";
@@ -30,11 +31,42 @@ export default function CreateGroup() {
   };
 
   let history = useHistory();
+  const { request } = useRequest();
+  const { user } = useUser();
+  const [researchGroup, setResearchGroup] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  //fetch research group if the student has already created a group
+  const fetchResearchGroup = async () => {
+    setLoading(true);
+    try {
+      const result = await request.get(`studentresearchgroup/${user._id}`);
+      if (result.status === 200) {
+        await Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "You have already registered your group. You cannot create more than one research group!",
+        });
+        history.push(`/ViewGroup/${result.data[0]._id}`);
+        window.location.reload(true);
+      }
+      console.log(" My Courses get ", result.data[0]._id);
+      setLoading(false);
+    } catch (e) {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (user && user._id) {
+      fetchResearchGroup();
+    }
+  }, [user]);
 
   const onFinish = async (values) => {
     console.log(values);
     try {
-      const result = axios.post("http://localhost:8000/researchgroup", values);
+      const result = request.post("researchgroup", values);
       if (result) {
         await Swal.fire(
           "Successful!",
