@@ -53,9 +53,13 @@ onDelete=(id)=>{
   render() {
     return (
         <div className=''>
+         
+              <br/>
+              <br/>
         <div className='text-center'>
         <h1>Notices</h1>
         </div>
+        
         <table class="table table-striped">
         <thead>
           <tr>
@@ -84,11 +88,11 @@ onDelete=(id)=>{
                 
                 <td>
                   <a className="btn btn-warning" href={`admin/edit/${posts._id}`}>
-                    <i className="fas fa-edit"></i>&nbsp;Edit
+                  <i class="material-icons">edit</i>&nbsp;Edit
                   </a>
                   &nbsp;
                   <a className="btn btn-danger" href="#" onClick={()=>this.onDelete(posts._id)}>
-                    <i className="fas fa-trash-alt"></i>&nbsp;Delete
+                  <i className="material-icons">delete_forever</i>&nbsp;Delete
                   </a>
                 </td>
               </tr>
@@ -96,7 +100,7 @@ onDelete=(id)=>{
         </tbody>
         <br/>
         <br/>
-        <div className="text-center">
+        <div className="text-center" style={{marginLeft:'20px'}}>
         <button className="btn btn-success"><a href="/admin/add" style={{textDecoration:'none',color:'white'}}>Add new Notice</a></button>
         </div>
       </table>

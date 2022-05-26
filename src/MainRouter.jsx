@@ -12,6 +12,8 @@ import CreateUsers from "./pages/AuthenticationManagement/CreateUsers";
 import SignupStudent from "./pages/AuthenticationManagement/SignupStudent";
 import SignupLecturer from "./pages/AuthenticationManagement/SignupLecturer";
 import Profile from "./pages/AuthenticationManagement/Profile";
+
+import AdminDashboard from "./components/AdminDashboard";
 // Priyankara
 
 // Chanduni
@@ -20,12 +22,23 @@ import CreateAdminPost from "./pages/admin/CreateAdminPost";
 import EditAdminPost from "./pages/admin/EditAdminPost";
 import AdminPostDetails from "./pages/admin/AdminPostDetails";
 import NoticeHome from "./components/NoticeHome";
+import ChatApp from "./components/ChatApp";
+
 // Chanduni
+
+// Nipuna
+import Mailer from "./pages/Email/emailer";
+import addpanel from "./pages/staff/addpanel";
+import addform from "./pages/StaffForm/addform";
+import edit from "./pages/staffedit/edit";
+// import fileupload from "./pages/fileupload/fileupload";
 
 // Erandi
 import CreateGroup from "./pages/student/CreateGroup";
 import ViewGroup from "./pages/student/ViewGroup";
+
 import Submissions from "./pages/student/Submissions";
+
 // Erandi
 
 
@@ -47,6 +60,8 @@ export default class MainRouter extends Component {
               <Route path="/SignupStudent" exact component={SignupStudent} />
               <Route path="/SignupLecturer" exact component={SignupLecturer} />
               <Route path="/Profile" exact component={Profile} />
+
+              <Route path="/AdminDashboard" exact component={AdminDashboard} />
               {/* End - Priyankara */}
 
 
@@ -56,8 +71,17 @@ export default class MainRouter extends Component {
                   <Route path='/admin/edit/:id' exact component={EditAdminPost}></Route>
                   <Route path='/admin/:id' exact component={AdminPostDetails}></Route>
                   <Route path='/' exact component={NoticeHome}></Route>
+                  <Route path='/chat' exact component={ChatApp}></Route>
+               
   
               {/* End - Chanduni */}
+
+              {/* Nipuna */}
+              <Route path='/Mailer' exact component={Mailer} ></Route>
+              <Route path='/Panel' exact component={addpanel}></Route>
+              <Route path='/staff/add' exact component={addform}></Route>
+              <Route path='/staff/edit/:id' exact component={edit}></Route>
+              {/* <Route path='/file' exact component={fileupload}></Route> */}
 
               {/* Erandi */}
                   <Route path="/CreateGroup" exact component={CreateGroup} />

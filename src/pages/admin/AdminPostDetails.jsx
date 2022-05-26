@@ -28,18 +28,26 @@ export default class AdminPostDetails extends Component {
     const { topic, body, date, other} = this.state.post;
     return (
       <div> 
-       
-
+        <button  className="btn btn-success btnback">
+          <i class="material-icons">navigate_before</i>
+          <a href="/admin"style={{ textDecoration: 'none', color: 'white' }}>
+              Back
+              </a></button>
+<br/>
+<br/>
           <div className='text-center'>
             
             <h1 >{topic}</h1>
-         
+            </div>
             
             <hr/>
-           
+            <br/>
+              <br/>
+           <div className='container'>
             <dl className="row">
+             
               <dt className="col-sm-3">Description</dt>
-              <dd className="col-sm-9">{body}</dd>
+              <dd className="col-sm-9" >{body}</dd>
               <dt className="col-sm-3">Date</dt>
               <dd className="col-sm-9">{date}</dd>
               <dt className="col-sm-3">Other</dt>
@@ -47,8 +55,9 @@ export default class AdminPostDetails extends Component {
              
               
             </dl>
+            </div>
            
-          </div>
+       
       
     
   
