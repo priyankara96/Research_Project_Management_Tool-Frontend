@@ -55,7 +55,7 @@ export default class MainRouter extends Component {
 
 
               {/* Priyankara*/}
-              <Route path="/Home1" exact component={Home1} />
+              <Route path="/" exact component={Home1} />
               <Route path="/Home2" exact component={Home2} />
               <Route path="/login" exact component={Signin} />
               <Route path="/CreateUsers" exact component={CreateUsers} />
