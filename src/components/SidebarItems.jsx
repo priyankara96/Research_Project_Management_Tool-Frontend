@@ -86,6 +86,53 @@ export const SidebarItemsStudent = [
     
 ];
 
+// -------------------------------------------------------------------------  Supervisor
+export const SidebarItemsSupervisor = [
+    {
+        title: "My Profile",
+        path: "/profile",
+        icon: <FaIcons.FaUserCircle />,
+        className: "nav-text"
+    },
+    {
+        title: "My Courses",
+        path: "/MyCourses",
+        icon: <FaIcons.FaBook />,
+        className: "nav-text"
+    },
+    {
+        title: "Notices",
+        path: "/Notices",
+        icon: <IoIcons.IoMdNotifications />,
+        className: "nav-text"
+    }
+    
+];
+
+
+// -------------------------------------------------------------------------  Co-Supervisor
+export const SidebarItemsCoSupervisor = [
+    {
+        title: "My Profile",
+        path: "/profile",
+        icon: <FaIcons.FaUserCircle />,
+        className: "nav-text"
+    },
+    {
+        title: "My Courses",
+        path: "/MyCourses",
+        icon: <FaIcons.FaBook />,
+        className: "nav-text"
+    },
+    {
+        title: "Notices",
+        path: "/Notices",
+        icon: <IoIcons.IoMdNotifications />,
+        className: "nav-text"
+    }
+    
+];
+
 
 // -------------------------------------------------------------------------  Admin
 export const SidebarItemsAdmin = [

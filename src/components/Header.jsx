@@ -3,6 +3,8 @@ import "./StylesHeader.css";
 import SliderLecturer from "./SliderLecturer";
 import SliderStudent from "./SliderStudent";
 import AdminSlider from "./SliderAdmin";
+import SliderSupervisor from "./SliderSupervisor";
+import SliderCoSupervisor from "./SliderCoSupervisor";
 import logo from "../images/CourseWeb.jpg";
 import useUser from "../services/UserContext";
 import { AiOutlineLogin } from "react-icons/ai";
@@ -96,6 +98,72 @@ function Header() {
         <div className="conatiner">
           <div className="header">
             <SliderLecturer />
+            <a href="/home2"><img src={logo} alt="logo" className="logo" /></a>
+
+            <ul className="pages">
+              <a href="/home2">
+                Home
+              </a>
+              <a href="/AboutUs">
+                About
+              </a>
+              <a href="/">
+                My Courses
+              </a>
+              <a href="/">
+                Resources
+              </a>
+              <a href="/">
+                Libraries
+              </a>
+              <a href="/">
+                Contact Us
+              </a>
+              <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
+            </ul>
+          </div>
+        </div>
+      </>
+    );
+  } else if (user.role == "Supervisor") { //  ------------------- When there is a supervisor login opportunity 
+    return (
+      <>
+        <div className="conatiner">
+          <div className="header">
+            <SliderSupervisor />
+            <a href="/home2"><img src={logo} alt="logo" className="logo" /></a>
+
+            <ul className="pages">
+              <a href="/home2">
+                Home
+              </a>
+              <a href="/AboutUs">
+                About
+              </a>
+              <a href="/">
+                My Courses
+              </a>
+              <a href="/">
+                Resources
+              </a>
+              <a href="/">
+                Libraries
+              </a>
+              <a href="/">
+                Contact Us
+              </a>
+              <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
+            </ul>
+          </div>
+        </div>
+      </>
+    );
+  } else if (user.role == "Co-Supervisor") { //  ------------------- When there is a co-supervisor login opportunity 
+    return (
+      <>
+        <div className="conatiner">
+          <div className="header">
+            <SliderCoSupervisor />
             <a href="/home2"><img src={logo} alt="logo" className="logo" /></a>
 
             <ul className="pages">

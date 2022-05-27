@@ -17,6 +17,8 @@ import All_Data from "./pages/AuthenticationManagement/All_Data";
 import All_Edit_Data from "./pages/AuthenticationManagement/All_Edit_Data";
 import Add_Student from "./pages/AuthenticationManagement/Add_Student";
 import Add_Lecturer from "./pages/AuthenticationManagement/Add_Lecturer";
+import Add_Supervisor from "./pages/AuthenticationManagement/Add_Supervisor";
+import Add_CoSupervisor from "./pages/AuthenticationManagement/Add_Co-Supervisor";
 
 import AdminDashboard from "./components/AdminDashboard";
 import AboutUs from "./components/AboutUs";
@@ -47,6 +49,7 @@ import ViewGroup from "./pages/student/ViewGroup";
 
 import Submissions from "./pages/student/Submissions";
 import Add_Lecturer from "./pages/AuthenticationManagement/Add_Lecturer";
+import Add_Supervisor from "./pages/AuthenticationManagement/Add_Supervisor";
 
 // Erandi
 
@@ -74,6 +77,8 @@ export default class MainRouter extends Component {
               <Route path="/alledit/:id" exact component={All_Edit_Data} />
               <Route path="/Add_Student" exact component={Add_Student} />
               <Route path="/Add_Lecturer" exact component={Add_Lecturer} />
+              <Route path="/Add_Supervisor" exact component={Add_Supervisor} />
+              <Route path="/Add_Co-Supervisor" exact component={Add_CoSupervisor} />
 
               <Route path="/AdminDashboard" exact component={AdminDashboard} />
               <Route path="/AboutUs" exact component={AboutUs} />

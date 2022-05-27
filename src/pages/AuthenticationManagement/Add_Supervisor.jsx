@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 import useRequest from "../../services/RequestContext";
 import moment from "moment";
 
-function SignupStudent() {
+function Add_Supervisor() {
   const layout = {
     labelCol: {
       span: 8,
@@ -27,19 +27,19 @@ function SignupStudent() {
   const { request } = useRequest();
 
   const onFinish = async (values) => {
-    values.role = "Student";
+    values.role = "Supervisor";
     values.birthday = moment(values.birthday).format("YYYY-MM-DD");
 
     console.log("value", values);
     try {
       const result = await request.post("CommonSignup", values);
-      console.log("api call sign up student result ", result);
+      console.log("api call sign up supervisor result ", result);
           swal({ text: "Successfully Created", icon: "success", button: "Okay!"})
               .then((value) => {
-              window.location = '/login';
+              window.location = '/All_Data';
           });
     } catch (e) {
-      console.log("post sign up student error ", e);
+      console.log("post create supervisor error ", e);
     }
   };
 
@@ -50,12 +50,11 @@ function SignupStudent() {
     <div className style={{ backgroundImage: 'url("")', backgroundSize: 'cover'}}>
       <div className="main-container-signup">
         <div className="form-common">
-          <h1>Sign Up</h1>
-          <h2>As a Student</h2>
+          <h1><h1>Add a new Supervisor</h1></h1>
 
           <Form
             layout="vertical"
-            name="signupStudent"
+            name="signupSupervisor"
             onFinish={onFinish}
             validateMessages={validateMessages}
           >
@@ -196,13 +195,13 @@ function SignupStudent() {
             <a href="#">Terms of Service and Privacy Policy</a>
             <hr></hr>
             <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-              {/* <Link to ="/signin" > */}
+              {/* <Link to ="/All_Data" > */}
               <Button type="primary" htmlType="submit">
                 Submit
               </Button>
               {/* </Link> */}
               &nbsp;
-              <Button href="/login" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
+              <Button href="/AuthenticationManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
             </Form.Item>
           </Form>
         </div>
@@ -212,4 +211,4 @@ function SignupStudent() {
   );
 }
 
-export default SignupStudent;
+export default Add_Supervisor;

@@ -8,7 +8,7 @@ image {
 
 .homeView {
     background: url=('../images/img1.jpg');
-    height: 51.5vh;
+    height: 63.5vh;
     width: 100%;
     display: flex;
     flex-direction: column;

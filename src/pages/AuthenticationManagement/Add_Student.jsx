@@ -50,7 +50,7 @@ function Add_Student() {
     <div className style={{ backgroundImage: 'url("")', backgroundSize: 'cover'}}>
       <div className="main-container-signup">
         <div className="form-common">
-          <h1><h1>Add a new Lecturer</h1></h1>
+          <h1><h1>Add a new Student</h1></h1>
 
           <Form
             layout="vertical"
