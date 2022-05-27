@@ -26,7 +26,7 @@ import ChatApp from "./components/ChatApp";
 
 // Chanduni
 
-/ Nipuna
+// Nipuna
 import Mailer from "./pages/Email/emailer";
 import addpanel from "./pages/staff/addpanel";
 import addform from "./pages/StaffForm/addform";
