@@ -36,7 +36,7 @@ function Header() {
               <a href="/">
                 Home
               </a>
-              <a href="/About">
+              <a href="/AboutUs">
                 About
               </a>
               <a href="/login">
@@ -69,7 +69,7 @@ function Header() {
               <a href="/home2">
                 Home
               </a>
-              <a href="/">
+              <a href="/AboutUs">
                 About
               </a>
               <a href="/">
@@ -102,7 +102,7 @@ function Header() {
               <a href="/home2">
                 Home
               </a>
-              <a href="/">
+              <a href="/AboutUs">
                 About
               </a>
               <a href="/">
@@ -135,7 +135,7 @@ function Header() {
               <a href="/AdminDashboard">
                 Home
               </a>
-              <a href="/">
+              <a href="/AboutUs">
                 About
               </a>
               <a href="/">

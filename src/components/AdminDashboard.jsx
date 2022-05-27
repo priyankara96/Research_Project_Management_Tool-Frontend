@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from "antd";
 import "./AdminDashboard.css"
 import UserManagement from "../images/UserManagement.jpg";
+import Feedback from "../images/Feedback.jpg";
 
 
 export default class MainDashboard extends Component {
@@ -24,8 +25,8 @@ export default class MainDashboard extends Component {
              <div class="card-block" ><br/>
              <img  style={{height: 130, width: 180}} class="rounded-circle" src={UserManagement} alt="User Management"/>
                <h4 class="card-title"></h4>                
-               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="#" style={{ textDecoration: 'none', color: 'Info' }}>
-                   User Management </a>
+               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/AuthenticationManagement" style={{ textDecoration: 'none', color: 'Info' }}>
+               Authentication Management </a>
                </Button>
              </div>
            </div>
@@ -85,10 +86,10 @@ export default class MainDashboard extends Component {
         <div class="col-md-3" >
            <div class="card text-center" style = {{backgroundColor:'#e5e3e3'}}>
              <div class="card-block" ><br/>
-             <img  style={{height: 130, width: 180}} class="rounded-circle" src="" alt="Card image cap"/>
+             <img  style={{height: 130, width: 180}} class="rounded-circle" src={Feedback} alt="Card image cap"/>
                <h4 class="card-title"></h4>                
                <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="#" style={{ textDecoration: 'none', color: 'Info' }}>
-                   Name 6 </a>
+                   Feedback Management </a>
                </Button>
              </div>
            </div>

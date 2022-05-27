@@ -12,8 +12,14 @@ import CreateUsers from "./pages/AuthenticationManagement/CreateUsers";
 import SignupStudent from "./pages/AuthenticationManagement/SignupStudent";
 import SignupLecturer from "./pages/AuthenticationManagement/SignupLecturer";
 import Profile from "./pages/AuthenticationManagement/Profile";
+import AuthenticationManagement from "./pages/AuthenticationManagement/AuthenticationManagement";
+import All_Data from "./pages/AuthenticationManagement/All_Data";
+import All_Edit_Data from "./pages/AuthenticationManagement/All_Edit_Data";
+import Add_Student from "./pages/AuthenticationManagement/Add_Student";
+import Add_Lecturer from "./pages/AuthenticationManagement/Add_Lecturer";
 
 import AdminDashboard from "./components/AdminDashboard";
+import AboutUs from "./components/AboutUs";
 // Priyankara
 
 // Chanduni
@@ -40,6 +46,7 @@ import CreateGroup from "./pages/student/CreateGroup";
 import ViewGroup from "./pages/student/ViewGroup";
 
 import Submissions from "./pages/student/Submissions";
+import Add_Lecturer from "./pages/AuthenticationManagement/Add_Lecturer";
 
 // Erandi
 
@@ -62,8 +69,14 @@ export default class MainRouter extends Component {
               <Route path="/SignupStudent" exact component={SignupStudent} />
               <Route path="/SignupLecturer" exact component={SignupLecturer} />
               <Route path="/Profile" exact component={Profile} />
+              <Route path="/AuthenticationManagement" exact component={AuthenticationManagement} />
+              <Route path="/All_Data" exact component={All_Data} />
+              <Route path="/alledit/:id" exact component={All_Edit_Data} />
+              <Route path="/Add_Student" exact component={Add_Student} />
+              <Route path="/Add_Lecturer" exact component={Add_Lecturer} />
 
               <Route path="/AdminDashboard" exact component={AdminDashboard} />
+              <Route path="/AboutUs" exact component={AboutUs} />
               {/* End - Priyankara */}
 
 
