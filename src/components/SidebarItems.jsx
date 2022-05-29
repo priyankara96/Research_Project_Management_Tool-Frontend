@@ -154,6 +154,18 @@ export const SidebarItemsAdmin = [
         className: "nav-text"
     },
     {
+        title: "Add a new Supervisor",
+        path: "/Add_Supervisor",
+        icon: <FaIcons.FaArrowAltCircleRight />,
+        className: "nav-text"
+    },
+    {
+        title: "Add a new Co-Supervisor",
+        path: "/Add_Co-Supervisor",
+        icon: <FaIcons.FaArrowAltCircleRight />,
+        className: "nav-text"
+    },
+    {
         title: "Update & Delete Authentication",
         path: "/All_Data",
         icon: <FaIcons.FaArrowAltCircleRight />,
