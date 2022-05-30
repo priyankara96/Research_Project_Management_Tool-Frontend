@@ -36,13 +36,13 @@ export default function HomeNew() {
       </div>
     </div>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    
-    <div  style={{marginLeft:"20px", marginRight:"15px"}}>
+    <form style={{backgroundColor: "#d1d1d1"}}>
+    <div style={{marginLeft:"20px", marginRight:"15px"}}>
     <h1>Welcome to Course Web</h1>
     <p>We are a leading non-state degree awarding institute approved by the University Grants Commission (UGC) under the Universities Act. We are also members of the Association of Commonwealth Universities (ACU), as well as the International Association of Universities (IAU), and the first Sri Lankan institute to be accredited by the Institution of Engineering & Technology, UK.</p> 
     <p>We are proud to be listed as a leading and formidable awarding institute authorised and approved by the University Grants Commission (UGC) under the Universities Act, and the International Association of Universities (IAU). Furthermore, not only we are the first Sri Lankan institute to be accredited by the Institute of Engineering & Technology(IET.), UK, our IT degrees are also in turn accredited by the Engineering Council, UK.</p>
     </div>
-
+    </form>
     <br/>
     
   </div>
