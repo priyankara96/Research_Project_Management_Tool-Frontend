@@ -3,13 +3,14 @@ import { Button } from "antd";
 import "./AdminDashboard.css"
 import UserManagement from "../images/UserManagement.jpg";
 import Feedback from "../images/Feedback.jpg";
+import background from "../images/background2.jpeg";
 
 
 export default class MainDashboard extends Component {
 
   render() {
     return (
-      <div style={{ backgroundImage: 'url("https://i5.walmartimages.com/asr/bad42561-78b0-4554-9aeb-f7bb5ce08905_1.6f69634b642562a7fc785d666eeacb70.jpeg")', backgroundSize: 'cover'}}>
+      <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
       
 
     <div className='page'>

@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import useRequest from "../services/RequestContext";
 import useUser from "../services/UserContext";
 import './Home1.css'
-import img1 from "../images/img1.jpg";
+import background from "../images/img1.jpg";
 
 export default function HomeNew() {
   const { updateToken } = useRequest();
@@ -21,21 +21,21 @@ export default function HomeNew() {
 
   // <Button onClick={logout}>Logout</Button>
   return (
-  <div>
+    <div  style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }} >
     
-    <div> 
+    <div className="text-center"> 
       {/* Create home page video */}
-      <div className='homeView' style={{backdropFilter:'blur(10px )'}}>
-       <br/><br/><br/><br/><br/>
-       <img src={img1} />
-       <h1 className="text-center" > Course Web </h1>
-      <p>What are you waiting for?</p>
+      <div  >
+       <br/><br/><br/><br/>
+       <div class="a">Course Web</div>
+       <div class="b">What are you waiting for?</div>
+       <br/><br/>
       <div>
       <a class="btn btn-light" href="/login" role="button" onClick={logout}> LOGIN </a>
       </div>
       </div>
     </div>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     
     <div  style={{marginLeft:"20px", marginRight:"15px"}}>
     <h1>Welcome to Course Web</h1>
