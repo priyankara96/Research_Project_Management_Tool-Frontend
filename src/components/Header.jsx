@@ -83,7 +83,7 @@ function Header() {
               <a href="/">
                 Libraries
               </a>
-              <a href="/">
+              <a href="/ContactUs">
                 Contact Us
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
@@ -116,7 +116,7 @@ function Header() {
               <a href="/">
                 Libraries
               </a>
-              <a href="/">
+              <a href="/ContactUs">
                 Contact Us
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
@@ -149,7 +149,7 @@ function Header() {
               <a href="/">
                 Libraries
               </a>
-              <a href="/">
+              <a href="/ContactUs">
                 Contact Us
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
@@ -182,7 +182,7 @@ function Header() {
               <a href="/">
                 Libraries
               </a>
-              <a href="/">
+              <a href="/ContactUs">
                 Contact Us
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
@@ -215,7 +215,7 @@ function Header() {
               <a href="/">
                 Libraries
               </a>
-              <a href="/">
+              <a href="/ContactUs">
                 Contact Us
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>

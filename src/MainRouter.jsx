@@ -22,6 +22,7 @@ import Add_CoSupervisor from "./pages/AuthenticationManagement/Add_Co-Supervisor
 
 import AdminDashboard from "./components/AdminDashboard";
 import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs";
 // Priyankara
 
 // Chanduni
@@ -85,6 +86,7 @@ export default class MainRouter extends Component {
 
               <Route path="/AdminDashboard" exact component={AdminDashboard} />
               <Route path="/AboutUs" exact component={AboutUs} />
+              <Route path="/ContactUs" exact component={ContactUs} />
               {/* End - Priyankara */}
 
 
