@@ -68,9 +68,6 @@ export default class addpanelmember extends Component {
 
   render() {
     return (
-
-      
-
       //designing form to get user inputs
         <div className="col-md-8 mt-4 mx-auto">
           <h1 className="h3 mb-3 font-weight-normal">Add Panel Member </h1>
