@@ -7,7 +7,9 @@ import useRequest from "../../services/RequestContext";
 import useUser from "../../services/UserContext";
 import Swal from "sweetalert2";
 import docImage from "../../images/doc3.jpg";
+import uploadImg from "../../images/uploadPH.jpg";
 import "./Student.css";
+import axios from "axios";
 
 export default function Submissions() {
   const [upload, setUpload] = useState(null);
@@ -18,26 +20,32 @@ export default function Submissions() {
   const { request } = useRequest();
   const { user } = useUser();
 
-  const fetchSubmissions = async () => {
+  //fetch uploaded submission
+  const fetchSubmissions = async (value) => {
+    console.log(value);
     setLoading(true);
     try {
-      const result = await request.get(`submission/${user._id}`);
+      const result = await axios.get(
+        `http://localhost:8000/mysubmission/${value}`
+      );
       if (result.status === 200) {
         setSubmissionList(result.data);
       }
-      console.log(" Submission get", result);
+
+      console.log(" Submission get", result.data);
       setLoading(false);
     } catch (e) {
       setLoading(false);
     }
   };
 
-  useEffect(() => {
-    if (user && user._id) {
-      fetchSubmissions();
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user && user._id) {
+  //     fetchSubmissions();
+  //   }
+  // }, [user]);
 
+  //Uploading a file to firebase
   const uploadFile = (file) => {
     if (!file) return;
 
@@ -61,38 +69,28 @@ export default function Submissions() {
     );
   };
 
+  //capturing user entered file
   const formHandler = (e) => {
     e.preventDefault();
     const file = e.target[0].files[0];
     uploadFile(file);
   };
 
-  //   if (upload) {
-
-  //       <div>
-  //         <form onSubmit={formHandler}>
-  //           <input type="file" />
-  //           <button type="submit">Upload</button>
-  //         </form>
-  //         <p>Uploaded {progress} %</p>
-  //         <a href={upload}>
-  //           <img src={docImage} className="docImage"></img>
-  //         </a>
-  //       </div>
-
-  //   }
-
-  const onFinish = (values) => {
+  //adding submission
+  const onFinish = async (values) => {
     values.submitURL = upload;
     console.log(values);
     try {
-      const result = request.post("submission", values);
+      const result = await request.post("submission", values);
       if (result) {
         Swal.fire(
           "Successful!",
           "Your Have Successfully Submitted Your Document.",
           "success"
         );
+        console.log("id sub", result.data);
+        fetchSubmissions(result.data);
+        // window.location.reload(true);
       }
     } catch (e) {
       console.log("post group registration error ", e);
@@ -100,13 +98,14 @@ export default function Submissions() {
     form.resetFields();
   };
 
+  //Reset fields
   const onReset = () => {
     form.resetFields();
   };
 
   const layout = {
     labelCol: { span: 8 },
-    wrapperCol: { span: 8 },
+    wrapperCol: { span: 10 },
   };
   const tailLayout = {
     wrapperCol: { offset: 8, span: 8 },
@@ -114,61 +113,126 @@ export default function Submissions() {
 
   return (
     <div>
-      <center>
-        <h1>Submissions</h1>
-        <br />
-        <br />
-        <form onSubmit={formHandler}>
-          <input type="file" />
+      <img src={uploadImg} className="uploadImg"></img>
+
+      <div className="submission-container">
+        <center>
+          <br />
+          <h1>Submissions</h1>
+          <br />
+
+          <form onSubmit={formHandler}>
+            <input type="file" />
+            <br />
+
+            <button type="submit" className="uploadButton">
+              Upload
+            </button>
+          </form>
+          <br />
+          <h6>Uploaded {progress} %</h6>
+
+          <br />
+
+          <center>
+            <div className="doc">
+              {submissionList && (
+                <a href={submissionList.submitURL}>
+                  <img src={docImage} className="docImage"></img>
+                </a>
+              )}
+            </div>
+          </center>
           <br />
           <br />
-          <button type="submit" className="uploadButton">
-            Upload
-          </button>
-        </form>
-        <br />
-        <h6>Uploaded {progress} %</h6>
-
-        <br />
-        <br />
-
-        <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
-          <Form.Item
-            name="groupID"
-            label="Group ID"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
+          <Form
+            {...layout}
+            form={form}
+            name="control-hooks"
+            onFinish={onFinish}
           >
-            <Input />
-          </Form.Item>
-          <Form.Item name="submitURL" label="Submit URL" hidden="true">
-            <Input />
-          </Form.Item>
-          <Form.Item name="submitDateTime" label="Submission Date">
-            <Input defaultValue={new Date()} disabled="true" />
-          </Form.Item>
+            <Form.Item
+              name="groupID"
+              label="Group ID"
+              rules={[
+                {
+                  required: true,
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item name="submitURL" label="Submit URL" hidden="true">
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="subject"
+              label="Subject"
+              rules={[
+                {
+                  required: true,
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item name="submitDateTime" label="Submission Date">
+              <Input defaultValue={new Date()} disabled="true" />
+            </Form.Item>
 
-          <Form.Item {...tailLayout}>
-            <Button type="primary" htmlType="submit" className="uploadButton">
-              Submit
-            </Button>
-            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-            <Button htmlType="button" onClick={onReset} className="resetBtn2">
-              Reset
-            </Button>
-          </Form.Item>
-        </Form>
-        <br />
-        <br />
-        {submissionList.map((submit) => (
-          <a href={submit.submitURL}>
-            <img src={docImage} className="docImage"></img>
-          </a>
-        ))}
-      </center>
+            <Form.Item {...tailLayout}>
+              <Button type="primary" htmlType="submit" className="uploadButton">
+                Submit
+              </Button>
+              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+              <Button htmlType="button" onClick={onReset} className="resetBtn2">
+                Reset
+              </Button>
+            </Form.Item>
+          </Form>
+          <br />
+          <br />
+        </center>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

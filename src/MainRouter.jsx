@@ -43,16 +43,17 @@ import addpanelmember from "./pages/PanelMembers/addpanelmember";
 import panelmembertable from "./pages/PanelMembers/panelmembertable";
 // import fileupload from "./pages/fileupload/fileupload";
 
-// Erandi
-import CreateGroup from "./pages/student/CreateGroup";
-import ViewGroup from "./pages/student/ViewGroup";
-
-import Submissions from "./pages/student/Submissions";
 import Add_Lecturer from "./pages/AuthenticationManagement/Add_Lecturer";
 import Add_Supervisor from "./pages/AuthenticationManagement/Add_Supervisor";
 
 // Erandi
-
+import CreateGroup from "./pages/student/CreateGroup";
+import ViewGroup from "./pages/student/ViewGroup";
+import StudentDetails from "./pages/admin/StudentDetails";
+import Submissions from "./pages/student/Submissions";
+import StudentList from "./pages/admin/StudentList";
+import StudentSubmissionView from "./pages/supervisor/StudentSubmissionView";
+// Erandi
 
 
 export default class MainRouter extends Component {
@@ -103,10 +104,14 @@ export default class MainRouter extends Component {
               <Route path='/staff/edit/:id' exact component={edit}></Route>
               <Route path='/addpanelmember' exact component={addpanelmember} ></Route>
               <Route path='/paneltable' exact component={panelmembertable} ></Route>
-              {/* Erandi */}
-                  <Route path="/CreateGroup" exact component={CreateGroup} />
+             
+             {/* Erandi */}
+             <Route path="/CreateGroup" exact component={CreateGroup} />
                   <Route path="/ViewGroup/:id" exact component={ViewGroup} />
                   <Route path="/Submissions" exact component={Submissions} />
+                  <Route path="/StudentDetails" exact component={StudentDetails} />
+                  <Route path="/StudentList" exact component={StudentList} />
+                  <Route path="/StudentSubmissionView" exact component={StudentSubmissionView} />
               {/* Erandi */}
 
              
