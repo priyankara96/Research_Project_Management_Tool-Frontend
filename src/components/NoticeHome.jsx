@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import './adminstyle.css';
-
+import logo from '../images/logo.png'
+import researchimage from '../images/researchimg.png'
 
 export default class NoticeHome extends Component {
 constructor(props){
@@ -110,8 +111,11 @@ onDelete=(id)=>{
 <h4>UseFul Links</h4></div>
         </div>
         <br/>
-        <i class="material-icons">group</i> <h6> <a href="/CreateGroup">Group Registration</a></h6>  &nbsp;
-        <i class="material-icons">group</i> <h6> <a href="/">Marking Scheme</a></h6>  &nbsp;
+        <img src={logo} className='imagesicon'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/CreateGroup" style={{textDecoration:'none', color:'black'}}>Group Registration</a></h5> <br/>
+        <img src={researchimage} className='imagesicon'/> &nbsp;<h5 style={{display: 'inline-block'}}> <a href="/" style={{textDecoration:'none', color:'black'}}>Marking Scheme</a></h5>  <br/>
+        <img src={logo} className='imagesicon'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/StudentList" style={{textDecoration:'none', color:'black'}}>Student List</a></h5>  <br/>
+        <img src={researchimage} className='imagesicon'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/Video" style={{textDecoration:'none', color:'black'}}>Research Guide Line video</a></h5>  <br/>
+   
     
       </div>
     )
