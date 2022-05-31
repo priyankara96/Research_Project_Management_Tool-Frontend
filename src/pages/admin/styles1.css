@@ -56,4 +56,26 @@ align-items: center;
     color: white;
     text-shadow: 4px 4px 6px #000000;
   }
+ /* Styles for StudentList */
+  
+ .searchbar{
+  margin-top:2%;
+  margin-bottom: 0.2%;
+  margin-right: 5%;
+  margin-left: 75%;
+  width:20%;
+}
+.DownloadBtn{
+margin-top: 30px;
+margin-left: 80px;
+}
+.DownloadBtn:hover{
+opacity: 0.6;
+}
 
+/* End-Styles for StudentList */
+
+.documentImg{
+  width: 20%;
+  height: 20%;
+}

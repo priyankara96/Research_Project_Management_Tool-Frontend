@@ -6,10 +6,17 @@ import useUser from "../../services/UserContext";
 import "antd/dist/antd.css";
 import "./Student.css";
 import Swal from "sweetalert2";
+import groupImg from "../../images/teamwork.png";
+import member from "../../images/member.png";
 
 export default function CreateGroup() {
   const [form] = Form.useForm();
+  let history = useHistory();
+  const { request } = useRequest();
+  const { user } = useUser();
+  const [loading, setLoading] = useState(true);
 
+  //validation messages
   const validateMessages = {
     required: "${label} is required!",
     types: {
@@ -30,18 +37,12 @@ export default function CreateGroup() {
     },
   };
 
-  let history = useHistory();
-  const { request } = useRequest();
-  const { user } = useUser();
-  const [researchGroup, setResearchGroup] = useState([]);
-  const [loading, setLoading] = useState(true);
-
   //fetch research group if the student has already created a group
   const fetchResearchGroup = async () => {
     setLoading(true);
     try {
       const result = await request.get(`studentresearchgroup/${user._id}`);
-      if (result.status === 200) {
+      if (result.data[0]._id != null) {
         await Swal.fire({
           icon: "error",
           title: "Oops...",
@@ -63,6 +64,7 @@ export default function CreateGroup() {
     }
   }, [user]);
 
+  //regsitering a research group
   const onFinish = async (values) => {
     console.log(values);
     try {
@@ -83,8 +85,35 @@ export default function CreateGroup() {
     form.resetFields();
   };
 
+  //reset fields
   const onReset = () => {
     form.resetFields();
+  };
+
+  //Demo button function
+  onFill = () => {
+    form.setFieldsValue({
+      leaderName: "Chamindu Priyankara",
+      leaderRegNo: "IT20245631",
+      leaderSliitMail: "IT20245631@my.sliit.lk",
+      leaderPersonalMail: "priyankara@gmail.com",
+      leaderContactNo: "0725636253",
+      member1Name: "Chanduni Nethmini",
+      member1RegNo: "IT20785203",
+      member1SliitMail: "IT20785203@my.sliit.lk",
+      member1PersonalMail: "chanduni@gmail.com",
+      member1ContactNo: "0764582356",
+      member2Name: "Nipuna Udayantha",
+      member2RegNo: "IT20715245",
+      member2SliitMail: "IT20715245@my.sliit.lk",
+      member2PersonalMail: "nipuna@gmail.com",
+      member2ContactNo: "0714578456",
+      member3Name: "Erandika Roshani",
+      member3RegNo: "IT20457120",
+      member3SliitMail: "IT20457120@my.sliit.lk",
+      member3PersonalMail: "erandika@gmail.com",
+      member3ContactNo: "0762354120",
+    });
   };
 
   return (
@@ -92,7 +121,8 @@ export default function CreateGroup() {
       <center>
         <br />
         <br />
-        <h3>Group Registration</h3>
+        <img src={groupImg} className="groupImg"></img>
+        <h3 className="heading">Group Registration</h3>
         <br />
         <br />
         <div className="groupContainer">
@@ -104,7 +134,8 @@ export default function CreateGroup() {
             validateMessages={validateMessages}
           >
             <div className="memberContainer">
-              <h5>Leader</h5>
+              <img src={member} className="memberImg"></img>
+              <h5 className="memberHeading">Leader</h5>
               <br />
               <Form.Item
                 label="Name"
@@ -143,7 +174,8 @@ export default function CreateGroup() {
               </Form.Item>
             </div>
             <div className="memberContainer">
-              <h5>Member 1</h5>
+              <img src={member} className="memberImg"></img>
+              <h5 className="memberHeading">Member 1</h5>
               <br />
               <Form.Item
                 label="Name"
@@ -182,7 +214,8 @@ export default function CreateGroup() {
               </Form.Item>
             </div>
             <div className="memberContainer">
-              <h5>Member 2</h5>
+              <img src={member} className="memberImg"></img>
+              <h5 className="memberHeading">Member 2</h5>
               <br />
               <Form.Item
                 label="Name"
@@ -221,7 +254,8 @@ export default function CreateGroup() {
               </Form.Item>
             </div>
             <div className="memberContainer">
-              <h5>Member 3</h5>
+              <img src={member} className="memberImg"></img>
+              <h5 className="memberHeading">Member 3</h5>
               <br />
               <Form.Item
                 label="Name"
@@ -265,6 +299,13 @@ export default function CreateGroup() {
             </Button>
             <Button htmlType="button" onClick={onReset} className="resetBtn">
               Reset
+            </Button>
+            <Button
+              htmlType="button"
+              onClick={this.onFill}
+              className="resetBtn"
+            >
+              Demo
             </Button>
           </Form>
         </div>

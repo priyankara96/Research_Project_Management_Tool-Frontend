@@ -201,6 +201,8 @@ function SignupStudent() {
                 Submit
               </Button>
               {/* </Link> */}
+              &nbsp;
+              <Button href="/login" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
             </Form.Item>
           </Form>
         </div>

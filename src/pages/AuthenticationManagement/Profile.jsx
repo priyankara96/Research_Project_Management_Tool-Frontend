@@ -5,6 +5,7 @@ import './Profile.css'
 import 'antd/dist/antd.css';
 import useRequest from "../../services/RequestContext";
 import useUser from "../../services/UserContext";
+import background from "../../images/background2.jpeg";
 import { Alert } from 'antd';
 import { useHistory} from "react-router-dom";
 
@@ -117,7 +118,7 @@ function Stdprofile() {
 
     <>
     
-    <div className style={{ backgroundImage: 'url("https://i5.walmartimages.com/asr/bad42561-78b0-4554-9aeb-f7bb5ce08905_1.6f69634b642562a7fc785d666eeacb70.jpeg")', backgroundSize: 'cover'}}>
+    <div className style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
       <div className="main-container-profile">
 
         <div className="form-profile">

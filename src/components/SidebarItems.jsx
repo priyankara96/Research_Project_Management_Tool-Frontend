@@ -86,29 +86,88 @@ export const SidebarItemsStudent = [
     
 ];
 
+// -------------------------------------------------------------------------  Supervisor
+export const SidebarItemsSupervisor = [
+    {
+        title: "My Profile",
+        path: "/profile",
+        icon: <FaIcons.FaUserCircle />,
+        className: "nav-text"
+    },
+    {
+        title: "My Courses",
+        path: "/MyCourses",
+        icon: <FaIcons.FaBook />,
+        className: "nav-text"
+    },
+    {
+        title: "Notices",
+        path: "/Notices",
+        icon: <IoIcons.IoMdNotifications />,
+        className: "nav-text"
+    }
+    
+];
+
+
+// -------------------------------------------------------------------------  Co-Supervisor
+export const SidebarItemsCoSupervisor = [
+    {
+        title: "My Profile",
+        path: "/profile",
+        icon: <FaIcons.FaUserCircle />,
+        className: "nav-text"
+    },
+    {
+        title: "My Courses",
+        path: "/MyCourses",
+        icon: <FaIcons.FaBook />,
+        className: "nav-text"
+    },
+    {
+        title: "Notices",
+        path: "/Notices",
+        icon: <IoIcons.IoMdNotifications />,
+        className: "nav-text"
+    }
+    
+];
+
 
 // -------------------------------------------------------------------------  Admin
 export const SidebarItemsAdmin = [
     {
-        title: "Job Vacancy Management",
+        title: "Authentication Management",
         className: "nav-text2",
-        path:"#"
+        path:"/AuthenticationManagement"
     },
     {
-        title: "Add a new vacancy",
-        path: "/",
+        title: "Add a new Student",
+        path: "/Add_Student",
         icon: <FaIcons.FaArrowAltCircleRight />,
         className: "nav-text"
     },
     {
-        title: "Update & Delete vacancy",
-        path: "/",
+        title: "Add a new Lecturer",
+        path: "/Add_Lecturer",
         icon: <FaIcons.FaArrowAltCircleRight />,
         className: "nav-text"
     },
     {
-        title: "Delete Career Requests",
-        path: "/",
+        title: "Add a new Supervisor",
+        path: "/Add_Supervisor",
+        icon: <FaIcons.FaArrowAltCircleRight />,
+        className: "nav-text"
+    },
+    {
+        title: "Add a new Co-Supervisor",
+        path: "/Add_Co-Supervisor",
+        icon: <FaIcons.FaArrowAltCircleRight />,
+        className: "nav-text"
+    },
+    {
+        title: "Update & Delete Authentication",
+        path: "/All_Data",
         icon: <FaIcons.FaArrowAltCircleRight />,
         className: "nav-text"
     },
@@ -118,15 +177,10 @@ export const SidebarItemsAdmin = [
         icon: <FaIcons.FaArrowAltCircleRight />,
         className: "nav-text"
     },
-    {
-        title: "Authentication Management",
-        path: "/",
-        className: "nav-text2"
-    },
 
     {
         title: "Feedback Management",
-        path: "/",
+        path: "#",
         className: "nav-text2"
     }
 ];

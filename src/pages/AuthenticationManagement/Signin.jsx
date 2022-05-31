@@ -4,6 +4,7 @@ import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "./stylesSignin.css";
 import logo from "../../images/logo.png";
+import background from "../../images/background2.jpeg";
 import useRequest from "../../services/RequestContext";
 import useUser from "../../services/UserContext";
 import { useHistory } from "react-router-dom";
@@ -37,7 +38,7 @@ function Signin() {
 
   return (
     <>
-    <div className style={{ backgroundImage: 'url("")', backgroundSize: 'cover'}}>
+    <div className style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }} >
       <div className="main-container-signin">
         <div className="form-signin">
           <h1>Login</h1>
@@ -89,7 +90,7 @@ function Signin() {
                   <Checkbox>Remember me |</Checkbox>
                 </Form.Item>
 
-                <a href="/CreateUsers">Sign up</a>
+                <a href="/SignupStudent">Sign up</a>
               </Form.Item>
 
               <Form.Item>

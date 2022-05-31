@@ -35,3 +35,8 @@
     text-decoration: underline;
     padding: 5px;
   }
+  .imagesicons{
+    border-radius: 50%;
+    max-width: 55px;
+    max-height: 55px;
+  }

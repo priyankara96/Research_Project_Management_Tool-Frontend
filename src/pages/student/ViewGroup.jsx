@@ -5,6 +5,8 @@ import axios from "axios";
 import "antd/dist/antd.css";
 import "./Student.css";
 import Swal from "sweetalert2";
+import groupImg from "../../images/teamwork.png";
+import member from "../../images/member.png";
 
 export default function ViewGroup() {
   const [data, setData] = useState();
@@ -12,6 +14,7 @@ export default function ViewGroup() {
   const [form] = Form.useForm();
   const { id } = useParams();
 
+  //validations
   const validateMessages = {
     required: "${label} is required!",
     types: {
@@ -32,6 +35,7 @@ export default function ViewGroup() {
     },
   };
 
+  //fetching specific group
   const fetchGroup = async (val) => {
     setLoading(true);
     try {
@@ -58,6 +62,7 @@ export default function ViewGroup() {
 
   let history = useHistory();
 
+  //update research group
   const onFinish = async (values) => {
     try {
       const result = await axios.put(
@@ -76,9 +81,10 @@ export default function ViewGroup() {
     }
   };
 
+  //delete research group
   const onDelete = async (value) => {
     try {
-      Swal.fire({
+      await Swal.fire({
         title: "Are you sure?",
         text: "You won't be able to revert this!, You will need to re-register a research group !!!",
         icon: "warning",
@@ -113,7 +119,8 @@ export default function ViewGroup() {
       <center>
         <br />
         <br />
-        <h3>Your Research Group</h3>
+        <img src={groupImg} className="groupImg"></img>
+        <h3 className="heading">Your Research Group</h3>
         <h6>
           <br />
           <p className="note">
@@ -134,7 +141,8 @@ export default function ViewGroup() {
               validateMessages={validateMessages}
             >
               <div className="memberContainer">
-                <h5>Leader</h5>
+                <img src={member} className="memberImg"></img>
+                <h5 className="memberHeading">Leader</h5>
                 <br />
                 <Form.Item
                   label="Name"
@@ -173,7 +181,8 @@ export default function ViewGroup() {
                 </Form.Item>
               </div>
               <div className="memberContainer">
-                <h5>Member 1</h5>
+                <img src={member} className="memberImg"></img>
+                <h5 className="memberHeading">Member 1</h5>
                 <br />
                 <Form.Item
                   label="Name"
@@ -212,7 +221,8 @@ export default function ViewGroup() {
                 </Form.Item>
               </div>
               <div className="memberContainer">
-                <h5>Member 2</h5>
+                <img src={member} className="memberImg"></img>
+                <h5 className="memberHeading">Member 2</h5>
                 <br />
                 <Form.Item
                   label="Name"
@@ -251,7 +261,8 @@ export default function ViewGroup() {
                 </Form.Item>
               </div>
               <div className="memberContainer">
-                <h5>Member 3</h5>
+                <img src={member} className="memberImg"></img>
+                <h5 className="memberHeading">Member 3</h5>
                 <br />
                 <Form.Item
                   label="Name"
@@ -292,16 +303,9 @@ export default function ViewGroup() {
               <Button type="primary" className="updttButton" htmlType="submit">
                 Update
               </Button>
-            </Form>
-          )}
-
-          {data && (
-            <Form>
-              {" "}
               <Button
                 type="primary"
                 className="dlttButton"
-                htmlType="submit"
                 onClick={() => onDelete(data._id)}
               >
                 Delete
