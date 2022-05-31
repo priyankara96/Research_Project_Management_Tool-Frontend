@@ -35,6 +35,7 @@ import ChatApp from "./components/ChatApp";
 import GroupList from "./components/GroupList";
 import Video from "./components/Video";
 import AdminUpload from "./pages/admin/AdminUpload";
+import ViewAdminUpload from "./pages/admin/ViewAdminUpload";
 // Chanduni
 
 // Nipuna
@@ -100,7 +101,7 @@ export default class MainRouter extends Component {
                   <Route path='/GroupList' exact component={GroupList}></Route>
                   <Route path='/Video' exact component={Video}></Route>
                   <Route path='/Resources' exact component={AdminUpload}></Route>
-  
+                  <Route path='/AdminUploads' exact component={ViewAdminUpload}></Route>
               {/* End - Chanduni */}
 
              {/* Nipuna */}
