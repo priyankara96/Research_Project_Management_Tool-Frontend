@@ -32,6 +32,7 @@ import AdminPostDetails from "./pages/admin/AdminPostDetails";
 import NoticeHome from "./components/NoticeHome";
 import ChatApp from "./components/ChatApp";
 import GroupList from "./components/GroupList";
+import Video from "./components/Video";
 // Chanduni
 
 // Nipuna
@@ -94,6 +95,7 @@ export default class MainRouter extends Component {
                   <Route path='/Notice' exact component={NoticeHome}></Route>
                   <Route path='/chat' exact component={ChatApp}></Route>
                   <Route path='/GroupList' exact component={GroupList}></Route>
+                  <Route path='/Video' exact component={Video}></Route>
   
               {/* End - Chanduni */}
 
