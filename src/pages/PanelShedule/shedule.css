@@ -1,0 +1,17 @@
+.btnAlign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnback {
+    line-height: 20px;
+    margin-top: 50px;
+    font-size: 12pt;
+    font-family: tahoma;
+
+    margin-right: 2px;
+    position: absolute;
+    top: 50;
+    right: 0;
+}

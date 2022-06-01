@@ -8,6 +8,7 @@ export default class panelshedule extends Component {
   constructor(props){
     super(props);
     this.state={
+      gid:"",
       name:"",
       date:"",
       time:"",
@@ -31,9 +32,10 @@ export default class panelshedule extends Component {
 
     e.preventDefault();
 
-    const {name,date,time,link} = this.state;
+    const {gid,name,date,time,link} = this.state;
 
     const data ={
+      gid:gid,
       name:name,
       date:date,
       time:time,
@@ -54,6 +56,7 @@ export default class panelshedule extends Component {
       if(res.data.success){
         this.setState(
           {
+            gid:"",
             name:"",
             date:"",
             time:"",
@@ -73,8 +76,19 @@ export default class panelshedule extends Component {
     return (
       //designing form to get user inputs
         <div className="col-md-8 mt-4 mx-auto">
-          <h1 className="h3 mb-3 font-weight-normal">Add Panel Member </h1>
+          <h1 className="h3 mb-3 font-weight-normal">Panel Allocation List</h1>
           <form className="needs-validation" noValidate>
+            
+            <div className="form-group" style={{marginBottom:'15px'}}>
+              <label style={{marginBottom:'5px'}} >Group ID</label>
+              <input type="text"
+              className="form-control"
+              name="gid"
+              placeholder="group id "
+              value={this.state.gid}
+              onChange={this.handleInputChange}/>
+            </div>
+
             <div className="form-group" style={{marginBottom:'15px'}}>
               <label style={{marginBottom:'5px'}} >Panel Member</label>
               <input type="text"

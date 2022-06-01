@@ -77,6 +77,7 @@ export default class edit extends Component{
   render() {
     return (
       //designing form for updating
+      
         <div className="col-md-8 mt-4 mx-auto">
           <h1 className="h3 mb-3 font-weight-normal">Edit Staff</h1>
           <form className="needs-validation" noValidate>
@@ -84,7 +85,7 @@ export default class edit extends Component{
               <label style={{marginBottom:'5px'}} >Name</label>
               <input type="text"
               className="form-control"
-              name="name"
+              name="name" 
               placeholder="Enter Topic"
               value={this.state.name}
               onChange={this.handleInputChange}/>

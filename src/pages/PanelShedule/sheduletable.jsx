@@ -37,6 +37,7 @@ class sheduletable extends Component {
   //implementation of searching function, searching done by including uppercases and lowercases
   filterData(posts, searchKey) {
     const result = posts.filter((post) =>
+      post.gid.toLowerCase().includes(searchKey) ||
       post.name.toLowerCase().includes(searchKey) ||
       post.date.toLowerCase().includes(searchKey) ||
       post.time.toLowerCase().includes(searchKey) ||
@@ -78,10 +79,11 @@ class sheduletable extends Component {
             <tr>
               {/* defining tabel headings */}
               <th scope="col">#ID</th>
-              <th scope="col">Name </th>
+               <th scope="col"> Group ID </th>
+              <th scope="col">Panel Member </th>
               <th scope="col">Date</th>
               <th scope="col">Time </th>
-               <th scope="col">Link  </th>
+               <th scope="col"> Group Chat Link  </th>
                <th scope="col">ACTION</th>
             </tr>
           </thead>
@@ -93,16 +95,17 @@ class sheduletable extends Component {
                   <th scope="row">{index + 1}</th>
                   <td>
                     <a href={`/post/${posts._id}`} style={{ textDecoration: 'none' }}>
-                      {posts.name}
+                      {posts.gid}
                     </a>
                   </td>
+                  <td>{posts.name}</td>
                   <td>{posts.date}</td>
                   <td>{posts.time}</td>
                   <td>{posts.link}</td>        
                   <td>
 
                     {/* button for update */}
-                    <a className="btn btn-warning" href={`/edit/panel/${posts._id}`}>
+                    <a className="btn btn-warning" href={`edit/shedule/${posts._id}`}>
                       <i className="fas fa-edit"></i>&nbsp;Edit
                     </a>
                     &nbsp;

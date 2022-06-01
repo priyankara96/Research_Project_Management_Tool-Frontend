@@ -57,7 +57,9 @@ import panelshedule from "./pages/PanelShedule/addpanelshedule";
 import sheduletable from "./pages/PanelShedule/sheduletable";
 import editshedule from "./pages/PanelShedule/editshedule";
 import editpanel from "./pages/PanelMembers/editpanel";
+import downloadshedule from "./pages/PanelShedule/downloadshedule";
 // import fileupload from "./pages/fileupload/fileupload";
+
 
 import Add_Lecturer from "./pages/AuthenticationManagement/Add_Lecturer";
 import Add_Supervisor from "./pages/AuthenticationManagement/Add_Supervisor";
@@ -140,6 +142,8 @@ export default class MainRouter extends Component {
               <Route path='/sheduletable' exact component={sheduletable} ></Route>
               <Route path='/edit/shedule/:id' exact component={editshedule} ></Route>
               <Route path='/edit/panel/:id' exact component={editpanel}></Route>
+              <Route path='/downloadshedule' exact component={downloadshedule} ></Route>
+
              
              {/* Erandi */}
              <Route path="/CreateGroup" exact component={CreateGroup} />
