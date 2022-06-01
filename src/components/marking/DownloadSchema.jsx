@@ -80,7 +80,7 @@ onDelete=(id)=>{
               <br/>
               <br/>
         <div className='text-center'>
-        <h1>Marking Schema</h1>
+        <h1>Marking Scheme</h1>
         </div>
         <button  className="btn btn-success btnback">
           <i class="material-icons">navigate_before</i>
