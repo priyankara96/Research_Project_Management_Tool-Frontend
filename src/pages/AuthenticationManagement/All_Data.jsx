@@ -109,7 +109,7 @@ export default class AlldatasList extends Component {
             </div>
 
             <form style={{backgroundColor: "#ffff"}}>
-            <table className = "table">
+            <table class="table table-bordered table-white">
                 <thead className = "thead-light" >
                     <tr>
                         <th> First Name </th> 
