@@ -48,14 +48,14 @@ function Add_PanelMember() {
   // Demo
   const [form] = Form.useForm();
   const onFill = () => { form.setFieldsValue({ 
-    name: 'Thusithanjana', 
-    name1: 'Thilakarathna', 
-    nic: '505692631V',
-    email: 'thusithanjana@gmail.com',
-    number: '0770000000',
+    name: 'Gimhani', 
+    name1: 'Hettiarachchi', 
+    nic: '263150569V',
+    email: 'gimhani@gmail.com',
+    number: '0776549756',
     inputpw: '12345',
     confirm: '12345',
-    gender: 'Male',
+    gender: 'Female',
   }); };
 
   const [value] = React.useState(1);

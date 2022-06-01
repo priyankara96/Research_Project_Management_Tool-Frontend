@@ -95,14 +95,14 @@ export const SidebarItemsSupervisor = [
         className: "nav-text"
     },
     {
-        title: "My Courses",
-        path: "/MyCourses",
+        title: "Research Topic Evaluation",
+        path: "/AcceptTopics",
         icon: <FaIcons.FaBook />,
         className: "nav-text"
     },
     {
-        title: "Notices",
-        path: "/Notices",
+        title: "Student Document Evaluation",
+        path: "/StudentSubmissionView",
         icon: <IoIcons.IoMdNotifications />,
         className: "nav-text"
     }
@@ -119,14 +119,14 @@ export const SidebarItemsCoSupervisor = [
         className: "nav-text"
     },
     {
-        title: "My Courses",
-        path: "/MyCourses",
+        title: "Research Topic Evaluation",
+        path: "/AcceptTopics",
         icon: <FaIcons.FaBook />,
         className: "nav-text"
     },
     {
-        title: "Notices",
-        path: "/Notices",
+        title: "Student Document Evaluation",
+        path: "/StudentSubmissionView",
         icon: <IoIcons.IoMdNotifications />,
         className: "nav-text"
     }
