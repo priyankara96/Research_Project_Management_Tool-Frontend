@@ -51,6 +51,10 @@ import addform from "./pages/StaffForm/addform";
 import edit from "./pages/staffedit/edit";
 import addpanelmember from "./pages/PanelMembers/addpanelmember";
 import panelmembertable from "./pages/PanelMembers/panelmembertable";
+import panelshedule from "./pages/PanelShedule/addpanelshedule";
+import sheduletable from "./pages/PanelShedule/sheduletable";
+import editshedule from "./pages/PanelShedule/editshedule";
+import editpanel from "./pages/PanelMembers/editpanel";
 // import fileupload from "./pages/fileupload/fileupload";
 
 import Add_Lecturer from "./pages/AuthenticationManagement/Add_Lecturer";
@@ -123,6 +127,10 @@ export default class MainRouter extends Component {
               <Route path='/staff/edit/:id' exact component={edit}></Route>
               <Route path='/addpanelmember' exact component={addpanelmember} ></Route>
               <Route path='/paneltable' exact component={panelmembertable} ></Route>
+              <Route path='/panelshedule' exact component={panelshedule} ></Route>
+              <Route path='/sheduletable' exact component={sheduletable} ></Route>
+              <Route path='/edit/shedule/:id' exact component={editshedule} ></Route>
+              <Route path='/edit/panel/:id' exact component={editpanel}></Route>
              
              {/* Erandi */}
              <Route path="/CreateGroup" exact component={CreateGroup} />

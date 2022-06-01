@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class edit extends Component{
+export default class editshedule extends Component{
 
 //initializing using constructor to null values
   constructor(props){
     super(props);
     this.state={
       name:"",
-      idd:"",
-      date:""
+      date:"",
+      time:"",
+      link:""
     }
   }
 
@@ -28,25 +29,27 @@ export default class edit extends Component{
     e.preventDefault();
     const id = this.props.match.params.id;
 
-    const {name,idd,date} = this.state;
+    const {name,date,time,link} = this.state;
 
     const data ={
       name:name,
-      idd:idd,
-      date:date
+      date:date,
+      time:time,
+      link:link
     }
 
     console.log(data)
 
     //updating the relevant data by retrieving existing data
-    axios.put(`http://localhost:8000/staff/update/${id}`,data).then((res) =>{
+    axios.put(`http://localhost:8000/panelshedule/update/${id}`,data).then((res) =>{
       if(res.data.success){
         alert("Post updated Successfully")
         this.setState(
           {
             name:"",
-            idd:"",
-            date:""
+            date:"",
+            time:"",
+            link:""
           }
         )
       }
@@ -57,14 +60,15 @@ export default class edit extends Component{
 
     const id = this.props.match.params.id;
 
-    axios.get(`http://localhost:8000/staff/${id}`).then((res) =>{
+    axios.get(`http://localhost:8000/panelshedule/${id}`).then((res) =>{
 
       if(res.data.success){
         this.setState({
          
           name:res.data.post.name,
-          idd:res.data.post.idd,
-          date:res.data.post.date
+          date:res.data.post.date,
+          time:res.data.post.time,
+          link:res.data.post.link
 
         });
 
@@ -78,36 +82,46 @@ export default class edit extends Component{
     return (
       //designing form for updating
         <div className="col-md-8 mt-4 mx-auto">
-          <h1 className="h3 mb-3 font-weight-normal">Edit Staff</h1>
+          <h1 className="h3 mb-3 font-weight-normal">Edit Shedule</h1>
           <form className="needs-validation" noValidate>
             <div className="form-group" style={{marginBottom:'15px'}}>
-              <label style={{marginBottom:'5px'}} >Name</label>
+              <label style={{marginBottom:'5px'}} >Panel Member</label>
               <input type="text"
               className="form-control"
               name="name"
-              placeholder="Enter Topic"
+              placeholder="Panel Member"
               value={this.state.name}
               onChange={this.handleInputChange}/>
             </div>
-
-            <div className="form-group" style={{marginBottom:'15px'}}>
-              <label style={{marginBottom:'5px'}}>NIC</label>
-              <input type="text"
-              className="form-control"
-              name="idd"
-              placeholder="Enter Desciption"
-              value={this.state.idd}
-              onChange={this.handleInputChange}/>
-            </div>
-
 
             <div className="form-group" style={{marginBottom:'15px'}}>
               <label style={{marginBottom:'5px'}}>Date</label>
               <input type="date"
               className="form-control"
               name="date"
-              placeholder="Enter ingredients"
+              placeholder="date"
               value={this.state.date}
+              onChange={this.handleInputChange}/>
+            </div>
+
+
+            <div className="form-group" style={{marginBottom:'15px'}}>
+              <label style={{marginBottom:'5px'}}>Time</label>
+              <input type="time"
+              className="form-control"
+              name="time"
+              placeholder="time"
+              value={this.state.time}
+              onChange={this.handleInputChange}/>
+            </div>
+
+            <div className="form-group" style={{marginBottom:'15px'}}>
+              <label style={{marginBottom:'5px'}}>Link</label>
+              <input type="text"
+              className="form-control"
+              name="link"
+              placeholder="meeting link"
+              value={this.state.link}
               onChange={this.handleInputChange}/>
             </div>
 
