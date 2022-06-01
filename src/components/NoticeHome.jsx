@@ -3,6 +3,7 @@ import axios from 'axios'
 import './adminstyle.css';
 import logo from '../images/logo.png'
 import researchimage from '../images/researchimg.png'
+import submit from '../images/submit.jpg'
 
 export default class NoticeHome extends Component {
 constructor(props){
@@ -111,12 +112,31 @@ onDelete=(id)=>{
 <h4>UseFul Links</h4></div>
         </div>
         <br/>
-        <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/CreateGroup" style={{textDecoration:'none', color:'black'}}>Group Registration</a></h5> <br/>
-        <img src={researchimage} className='imagesicons'/> &nbsp;<h5 style={{display: 'inline-block'}}> <a href="/" style={{textDecoration:'none', color:'black'}}>Marking Scheme</a></h5>  <br/>
-        <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/StudentList" style={{textDecoration:'none', color:'black'}}>Student List</a></h5>  <br/>
-        <img src={researchimage} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/Video" style={{textDecoration:'none', color:'black'}}>Research Guide Line video</a></h5>  <br/>
+        <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/CreateGroup" style={{textDecoration:'none', color:'info'}}>Group Registration</a></h5> <br/>
+       <img src={researchimage} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/Video" style={{textDecoration:'none', color:'info'}}>Research Guide Line video</a></h5>  <br/>
+       <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/CreateGroup" style={{textDecoration:'none', color:'info'}}>Topic Registration</a></h5> <br/>
+        <hr/>
+  
    
-    
+        <div className='general'>
+        <h4>Downloadable Documentation</h4> </div>
+        <br/>
+        <img src={researchimage} className='imagesicons'/> &nbsp;<h5 style={{display: 'inline-block'}}> <a href="/schema" style={{textDecoration:'none', color:'black'}}>Marking Scheme</a></h5>  <br/>
+        <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/" style={{textDecoration:'none', color:'black'}}>Panel Allocation</a></h5>  <br/>
+        <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/StudentList" style={{textDecoration:'none', color:'black'}}>Student List</a></h5>  <br/>
+        <img src={researchimage} className='imagesicons'/> &nbsp;<h5 style={{display: 'inline-block'}}> <a href="/AdminUploads" style={{textDecoration:'none', color:'black'}}>Other Resources and Templates</a></h5>  <br/>
+        <hr/>
+  
+   
+  <div className='general'>
+  <h4>Submissions</h4> </div>
+  <br/>
+  
+  <img src={submit} className='imagesicons'/> &nbsp;<h5 style={{display: 'inline-block'}}> <a href="/Submissions" style={{textDecoration:'none', color:'black'}}>Click this link to add Your submissions</a></h5>  <br/>
+<hr/>
+<br/>
+<br/>
+<br/>
       </div>
     )
   }

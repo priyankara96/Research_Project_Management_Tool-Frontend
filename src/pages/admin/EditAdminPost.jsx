@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import swal from "sweetalert";
 
 export default class EditAdminPost extends Component {
     constructor(props) {
@@ -44,7 +44,7 @@ export default class EditAdminPost extends Component {
     
         axios.put(`http://localhost:8000/admin/update/${id}`, data).then((res) => {
           if (res.data.success) {
-            alert("Post updated Successfully")
+            swal("Update Successful", "Update is recorder", "success");
             
             this.setState(
               {

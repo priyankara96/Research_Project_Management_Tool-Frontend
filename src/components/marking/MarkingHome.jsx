@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import './styles1.css';
+import './Marking.css'
 
-export default class AdminHome extends Component {
+export default class MarkingHome extends Component {
 constructor(props){
 super(props);
       
@@ -15,7 +15,7 @@ componentDidMount(){
 }
 
 retrievePosts(){
-    axios.get("http://localhost:8000/admin").then(res =>{
+    axios.get("http://localhost:8000/marking").then(res =>{
       if(res.data.success){
         this.setState({
           posts:res.data.existingPosts
@@ -25,7 +25,7 @@ retrievePosts(){
     });
 }
 onDelete=(id)=>{
-    axios.delete(`http://localhost:8000/admin/delete/${id}`).then((res)=>{
+    axios.delete(`http://localhost:8000/marking/delete/${id}`).then((res)=>{
       alert("Deleted Successful");
       this.retrievePosts();
     })
@@ -33,9 +33,12 @@ onDelete=(id)=>{
 
   filterData(posts,searchKey){
     const result =posts.filter((post)=>
+    post.groupID.toLowerCase().includes(searchKey)||
     post.topic.toLowerCase().includes(searchKey)||
-    post.description.toLowerCase().includes(searchKey)||
-    post.postCategory.toLowerCase().includes(searchKey)
+    post.Student1.toLowerCase().includes(searchKey)||
+    post.Student2.toLowerCase().includes(searchKey)||
+    post.Student3.toLowerCase().includes(searchKey)||
+    post.Student4.toLowerCase().includes(searchKey)
     
     )
     this.setState({posts:result})
@@ -44,7 +47,7 @@ onDelete=(id)=>{
   handleSearchArea =(e) =>{
     const searchKey=e.currentTarget.value;
   
-    axios.get("http://localhost:8000/admin").then(res =>{
+    axios.get("http://localhost:8000/marking").then(res =>{
       if(res.data.success){
   
         this.filterData(res.data.existingPosts,searchKey)
@@ -58,23 +61,36 @@ onDelete=(id)=>{
               <br/>
               <br/>
         <div className='text-center'>
-        <h1>Notices</h1>
+        <h1>Marking Schema</h1>
         </div>
         <button  className="btn btn-success btnback">
           <i class="material-icons">navigate_before</i>
           <a href="/AdminDashboard"style={{ textDecoration: 'none', color: 'white' }}>
               Back
               </a></button>
+              <div className="col-md-6 mb-4">
+        <form class="form-inline">
+        <i class="fas fa-search" aria-hidden="true"></i>
+          <input
+          className="form-control form-control-sm ml-3 w-75"
+          type="search"
+          placeholder="search"
+          name="searchQuery"
+          onChange={this.handleSearchArea}>
+          </input>
+          </form>
+        </div>
         
         <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">No</th>
+            <th scope="col">Group ID</th>
             <th scope="col">Topic</th>
-            <th scope="col">Description</th>
-            <th scope="col">Other</th>
-            <th scope="col">Date</th>
-            <th scope="col">Action</th>
+            <th scope="col">Criteria</th>
+            <th scope="col">Student IT NO</th>          
+            <th scope="col">Mark Obtained </th>
+            <th scope="col">Actions </th>
           </tr>
         </thead>
         <tbody>
@@ -83,17 +99,18 @@ onDelete=(id)=>{
               <tr key={index}>
                 <th scope="row">{index+1}</th>
                 <td>
-                  <a href={`admin/${posts._id}`} style={{textDecoration:'none'}}>
-                  {posts.topic}
+                  <a href={`marking/${posts._id}`} style={{textDecoration:'none'}}>
+                  {posts.groupID}
                 </a>
                   </td>
                 
-                <td>{posts.body}</td>
-                <td>{posts.other}</td>
-                <td>{posts.date}</td>
+                <td>{posts.topic}</td>
+                <td>{posts.criteria}</td>
+                <td>{posts.Student1}<br/>{posts.Student2}<br/>{posts.Student3}<br/>{posts.Student4}</td>
+                <td>{posts.Mark1}<br/>{posts.Mark2}<br/>{posts.Mark3}<br/>{posts.Mark4}</td>
                 
                 <td>
-                  <a className="btn btn-warning" href={`admin/edit/${posts._id}`}>
+                  <a className="btn btn-warning" href={`marking/edit/${posts._id}`}>
                   <i class="material-icons">edit</i>&nbsp;Edit
                   </a>
                   &nbsp;
@@ -107,7 +124,7 @@ onDelete=(id)=>{
         <br/>
         <br/>
         <div className="text-center" style={{marginLeft:'20px'}}>
-        <button className="btn btn-success"><a href="/admin/add" style={{textDecoration:'none',color:'white'}}>Add new Notice</a></button>
+        <button className="btn btn-success"><a href="/marking/add" style={{textDecoration:'none',color:'white'}}>Add new Marking</a></button>
         </div>
       </table>
       </div>

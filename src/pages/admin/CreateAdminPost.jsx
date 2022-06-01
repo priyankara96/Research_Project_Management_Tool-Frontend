@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './styles1.css';
 import swal from "sweetalert";
-
+import notices from '../../images/notices.png'
 export default class CreateAdminPost extends Component {
 constructor(props){
     super(props);
@@ -48,7 +48,11 @@ handleInputChange = (e) =>{
             date:"",
             other:""
           }
-        )
+        );
+        swal(
+          "Notice Added Successfully",
+            "Notice Details added successfully",
+            "success");
       }
     })
   }
@@ -87,7 +91,9 @@ handleInputChange = (e) =>{
     
               <div className="row">
                 <div className="col-3">
-              <img src= 'https://www.pngall.com/wp-content/uploads/5/Hotel-Transparent.png' style={{width:'600px'}}/>
+                  <br/>
+                  <br/>
+              <img src= {notices} style={{width:'500px', borderRadius:"150000000000000000px"}}/>
               </div>
               <div className="col-9">
           <div className="align">
