@@ -4,7 +4,6 @@ import "antd/dist/antd.css";
 import { storage } from "./firebase";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import useRequest from "../../services/RequestContext";
-import useUser from "../../services/UserContext";
 import Swal from "sweetalert2";
 import docImage from "../../images/doc3.jpg";
 import uploadImg from "../../images/uploadPH.jpg";
@@ -18,7 +17,6 @@ export default function Submissions() {
   const [progress, setProgress] = useState(0);
   const [form] = Form.useForm();
   const { request } = useRequest();
-  const { user } = useUser();
 
   //fetch uploaded submission
   const fetchSubmissions = async (value) => {
@@ -38,12 +36,6 @@ export default function Submissions() {
       setLoading(false);
     }
   };
-
-  // useEffect(() => {
-  //   if (user && user._id) {
-  //     fetchSubmissions();
-  //   }
-  // }, [user]);
 
   //Uploading a file to firebase
   const uploadFile = (file) => {

@@ -45,7 +45,7 @@ export default function ViewGroup() {
 
       if (result.status === 200) {
         setData(result.data);
-        console.log("test ", result.data);
+        console.log("research groups ", result.data);
       }
 
       setLoading(false);
@@ -135,7 +135,7 @@ export default function ViewGroup() {
             <Form
               {...layout}
               form={form}
-              name="addmarks"
+              name="viewgroup"
               initialValues={data}
               onFinish={onFinish}
               validateMessages={validateMessages}

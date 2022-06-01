@@ -7,6 +7,7 @@ import background from "../images/background2.jpeg";
 import files from '../images/files.jpg';
 import markings from '../images/markings.jpg';
 import notices from '../images/notices.png'
+import teamimage from '../images/team-manage.jpg'
 
 
 export default class MainDashboard extends Component {
@@ -78,10 +79,10 @@ export default class MainDashboard extends Component {
         <div class="col-md-3" >
            <div class="card text-center" style = {{backgroundColor:'#e5e3e3'}}>
              <div class="card-block" ><br/>
-             <img  style={{height: 130, width: 180}} class="rounded-circle" src="" alt="Card image cap"/>
+             <img  style={{height: 130, width: 180}} class="rounded-circle" src={teamimage} alt="Card image cap"/>
                <h4 class="card-title"></h4>                
-               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="#" style={{ textDecoration: 'none', color: 'Info' }}>
-                   Name 5 </a>
+               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/StudentDetails" style={{ textDecoration: 'none', color: 'Info' }}>
+                  Research Group Management </a>
                </Button>
              </div>
            </div>

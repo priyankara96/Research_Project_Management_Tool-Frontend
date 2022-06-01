@@ -67,6 +67,11 @@ import StudentDetails from "./pages/admin/StudentDetails";
 import Submissions from "./pages/student/Submissions";
 import StudentList from "./pages/admin/StudentList";
 import StudentSubmissionView from "./pages/supervisor/StudentSubmissionView";
+import RegisterTopic from "./pages/student/RegisterTopic";
+import ViewStudentMarkList from "./pages/supervisor/ViewStudentMarkList";
+import ViewResearchTopic from "./pages/student/ViewResearchTopic";
+import AcceptTopics from "./pages/supervisor/AcceptTopics";
+import TopicStatusList from "./pages/supervisor/TopicStatusList";
 // Erandi
 
 
@@ -134,11 +139,16 @@ export default class MainRouter extends Component {
              
              {/* Erandi */}
              <Route path="/CreateGroup" exact component={CreateGroup} />
-                  <Route path="/ViewGroup/:id" exact component={ViewGroup} />
-                  <Route path="/Submissions" exact component={Submissions} />
-                  <Route path="/StudentDetails" exact component={StudentDetails} />
-                  <Route path="/StudentList" exact component={StudentList} />
-                  <Route path="/StudentSubmissionView" exact component={StudentSubmissionView} />
+             <Route path="/ViewGroup/:id" exact component={ViewGroup} />
+             <Route path="/Submissions" exact component={Submissions} />
+             <Route path="/StudentDetails" exact component={StudentDetails} />
+             <Route path="/StudentList" exact component={StudentList} />
+             <Route path="/StudentSubmissionView" exact component={StudentSubmissionView} />
+             <Route path="/RegisterTopic" exact component={RegisterTopic} />
+             <Route path="/ViewStudentMarkList" exact component={ViewStudentMarkList} />
+             <Route path="/ViewResearchTopic/:id" exact component={ViewResearchTopic} />
+             <Route path="/AcceptTopics" exact component={AcceptTopics} />
+             <Route path="/TopicStatusList" exact component={TopicStatusList} />
               {/* Erandi */}
 
              

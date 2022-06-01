@@ -51,7 +51,7 @@ export default function CreateGroup() {
         history.push(`/ViewGroup/${result.data[0]._id}`);
         window.location.reload(true);
       }
-      console.log(" My Courses get ", result.data[0]._id);
+      console.log(" My group get ", result.data[0]._id);
       setLoading(false);
     } catch (e) {
       setLoading(false);
@@ -129,7 +129,7 @@ export default function CreateGroup() {
           <Form
             {...layout}
             form={form}
-            name="addmarks"
+            name="registerGroup"
             onFinish={onFinish}
             validateMessages={validateMessages}
           >
