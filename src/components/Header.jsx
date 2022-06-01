@@ -39,19 +39,19 @@ function Header() {
                 Home
               </a>
               <a href="/login">
-                My Courses
+                Notice
               </a>
               <a href="/AdminUploads">
                 Resources
-              </a>
-              <a href="/login">
-                Notice
               </a>
               <a href="/AboutUs">
                 About
               </a>
               <a href="/ContactUs">
                 Contact Us
+              </a>
+              <a href="/login">
+                My Profile
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
@@ -71,20 +71,20 @@ function Header() {
               <a href="/home2">
                 Home
               </a>
-              <a href="/">
-                My Courses
+              <a href="/Notice">
+                Notice
               </a>
               <a href="/AdminUploads">
                 Resources
-              </a>
-              <a href="/Notice">
-                Notice
               </a>
               <a href="/AboutUs">
                 About
               </a>
               <a href="/ContactUs">
                 Contact Us
+              </a>
+              <a href="/Profile">
+                My Profile
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
@@ -104,20 +104,20 @@ function Header() {
               <a href="/home2">
                 Home
               </a>
-              <a href="/">
-                My Courses
+              <a href="/Notice">
+                Notice
               </a>
               <a href="/AdminUploads">
                 Resources
-              </a>
-              <a href="/Notice">
-                Notice
               </a>
               <a href="/AboutUs">
                 About
               </a>
               <a href="/ContactUs">
                 Contact Us
+              </a>
+              <a href="/Profile">
+                My Profile
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
@@ -137,20 +137,20 @@ function Header() {
               <a href="/SupervisorDashboard">
                 Home
               </a>
-              <a href="/">
-                My Courses
+              <a href="/Notice">
+                Notice
               </a>
               <a href="/AdminUploads">
                 Resources
-              </a>
-              <a href="/Notice">
-                Notice
               </a>
               <a href="/AboutUs">
                 About
               </a>
               <a href="/ContactUs">
                 Contact Us
+              </a>
+              <a href="/Profile">
+                My Profile
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
@@ -170,20 +170,20 @@ function Header() {
               <a href="/SupervisorDashboard">
                 Home
               </a>
-              <a href="/">
-                My Courses
+              <a href="/Notice">
+                Notice
               </a>
               <a href="/AdminUploads">
                 Resources
-              </a>
-              <a href="/Notice">
-                Notice
               </a>
               <a href="/AboutUs">
                 About
               </a>
               <a href="/ContactUs">
                 Contact Us
+              </a>
+              <a href="/Profile">
+                My Profile
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
@@ -203,20 +203,20 @@ function Header() {
               <a href="/AdminDashboard">
                 Home
               </a>
-              <a href="/">
-                My Courses
+              <a href="/Notice">
+                Notice
               </a>
               <a href="/AdminUploads">
                 Resources
-              </a>
-              <a href="/Notice">
-                Notice
               </a>
               <a href="/AboutUs">
                 About
               </a>
               <a href="/ContactUs">
                 Contact Us
+              </a>
+              <a href="#">
+                My Profile
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
