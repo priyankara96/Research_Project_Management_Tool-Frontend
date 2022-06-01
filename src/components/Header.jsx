@@ -38,9 +38,6 @@ function Header() {
               <a href="/">
                 Home
               </a>
-              <a href="/AboutUs">
-                About
-              </a>
               <a href="/login">
                 My Courses
               </a>
@@ -48,7 +45,10 @@ function Header() {
                 Resources
               </a>
               <a href="/login">
-                Libraries
+                Notice
+              </a>
+              <a href="/AboutUs">
+                About
               </a>
               <a href="/ContactUs">
                 Contact Us
@@ -71,17 +71,17 @@ function Header() {
               <a href="/home2">
                 Home
               </a>
-              <a href="/AboutUs">
-                About
-              </a>
               <a href="/">
                 My Courses
               </a>
               <a href="/">
                 Resources
               </a>
-              <a href="/">
-                Libraries
+              <a href="/Notice">
+                Notice
+              </a>
+              <a href="/AboutUs">
+                About
               </a>
               <a href="/ContactUs">
                 Contact Us
@@ -104,17 +104,17 @@ function Header() {
               <a href="/home2">
                 Home
               </a>
-              <a href="/AboutUs">
-                About
-              </a>
               <a href="/">
                 My Courses
               </a>
               <a href="/">
                 Resources
               </a>
-              <a href="/">
-                Libraries
+              <a href="/Notice">
+                Notice
+              </a>
+              <a href="/AboutUs">
+                About
               </a>
               <a href="/ContactUs">
                 Contact Us
@@ -131,14 +131,11 @@ function Header() {
         <div className="conatiner">
           <div className="header">
             <SliderSupervisor />
-            <a href="/home2"><img src={logo} alt="logo" className="logo" /></a>
+            <a href="/SupervisorDashboard"><img src={logo} alt="logo" className="logo" /></a>
 
             <ul className="pages">
-              <a href="/home2">
+              <a href="/SupervisorDashboard">
                 Home
-              </a>
-              <a href="/AboutUs">
-                About
               </a>
               <a href="/">
                 My Courses
@@ -146,8 +143,11 @@ function Header() {
               <a href="/">
                 Resources
               </a>
-              <a href="/">
-                Libraries
+              <a href="/Notice">
+                Notice
+              </a>
+              <a href="/AboutUs">
+                About
               </a>
               <a href="/ContactUs">
                 Contact Us
@@ -164,14 +164,11 @@ function Header() {
         <div className="conatiner">
           <div className="header">
             <SliderCoSupervisor />
-            <a href="/home2"><img src={logo} alt="logo" className="logo" /></a>
+            <a href="/SupervisorDashboard"><img src={logo} alt="logo" className="logo" /></a>
 
             <ul className="pages">
-              <a href="/home2">
+              <a href="/SupervisorDashboard">
                 Home
-              </a>
-              <a href="/AboutUs">
-                About
               </a>
               <a href="/">
                 My Courses
@@ -179,8 +176,11 @@ function Header() {
               <a href="/">
                 Resources
               </a>
-              <a href="/">
-                Libraries
+              <a href="/Notice">
+                Notice
+              </a>
+              <a href="/AboutUs">
+                About
               </a>
               <a href="/ContactUs">
                 Contact Us
@@ -203,17 +203,17 @@ function Header() {
               <a href="/AdminDashboard">
                 Home
               </a>
-              <a href="/AboutUs">
-                About
-              </a>
               <a href="/">
                 My Courses
               </a>
               <a href="/">
                 Resources
               </a>
-              <a href="/">
-                Libraries
+              <a href="/Notice">
+                Notice
+              </a>
+              <a href="/AboutUs">
+                About
               </a>
               <a href="/ContactUs">
                 Contact Us
