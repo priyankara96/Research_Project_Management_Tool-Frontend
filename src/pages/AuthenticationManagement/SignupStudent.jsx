@@ -44,6 +44,20 @@ function SignupStudent() {
     }
   };
 
+
+  // Demo
+  const [form] = Form.useForm();
+  const onFill = () => { form.setFieldsValue({ 
+    name: 'Arosha', 
+    name1: 'Dasanayaka', 
+    nic: '965692631V',
+    email: 'arosha@gmail.com',
+    number: '0774527548',
+    inputpw: '12345',
+    confirm: '12345',
+    gender: 'Female',
+  }); };
+
   const [value] = React.useState(1);
 
   return (
@@ -56,6 +70,7 @@ function SignupStudent() {
 
           <Form
             layout="vertical"
+            form={form}
             name="signupStudent"
             onFinish={onFinish}
             validateMessages={validateMessages}
@@ -204,6 +219,8 @@ function SignupStudent() {
               {/* </Link> */}
               &nbsp;
               <Button href="/login" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
+              <br/>
+              <Button type="button" htmlType="button" class="btn btn-outline-secondary" onClick={onFill} style={{marginLeft:"40px", marginTop:"10px"}}>Demo</Button>
             </Form.Item>
           </Form>
         </div>

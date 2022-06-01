@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import jsPdf from 'jspdf'
 import 'jspdf-autotable'
+import * as AiIcons from 'react-icons/ai';
 import background from "../../images/background2.jpeg";
 
 
@@ -84,14 +85,14 @@ export default class UserList extends Component {
     render() {
         return ( 
             <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
+                <a href="/AuthenticationManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"76px", marginTop:"5px"}} > <AiIcons.AiOutlineHome /> </a>
             <div className = "container" >
-            <br/>
             <div style = {{ float: 'none' }} >
             </div> <br/>
 
             <div className = "row" >
                 <div className = "col-lg-9 mt-2 mb-2" >
-                <h4> Details of all Users </h4> <br/>
+                <h1> Details of all Users </h1> <br/>
 
                 <button type="button" title="Report generation" class="btn btn-outline-primary btn-sm" 
                         onClick={this.jsPdfGenerator} > Download as a PDF 

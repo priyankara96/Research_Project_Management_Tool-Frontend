@@ -44,6 +44,20 @@ function Add_Lecturer() {
     }
   };
 
+
+  // Demo
+  const [form] = Form.useForm();
+  const onFill = () => { form.setFieldsValue({ 
+    name: 'Thusithanjana', 
+    name1: 'Thilakarathna', 
+    nic: '505692631V',
+    email: 'thusithanjana@gmail.com',
+    number: '0770000000',
+    inputpw: '12345',
+    confirm: '12345',
+    gender: 'Male',
+  }); };
+
   const [value] = React.useState(1);
 
   return (
@@ -55,6 +69,7 @@ function Add_Lecturer() {
 
           <Form
             layout="vertical"
+            form={form}
             name="signupLecturer"
             onFinish={onFinish}
             validateMessages={validateMessages}
@@ -202,6 +217,8 @@ function Add_Lecturer() {
               </Button>
               &nbsp;
               <Button href="/AuthenticationManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
+              <br/>
+              <Button type="button" htmlType="button" class="btn btn-outline-secondary" onClick={onFill} style={{marginLeft:"40px", marginTop:"10px"}}>Demo</Button>
             </Form.Item>
           </Form>
         </div>

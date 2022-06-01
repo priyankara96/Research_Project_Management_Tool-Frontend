@@ -44,6 +44,20 @@ function Add_Student() {
     }
   };
 
+
+  // Demo
+  const [form] = Form.useForm();
+  const onFill = () => { form.setFieldsValue({ 
+    name: 'Tharushi', 
+    name1: 'Rubasinghe', 
+    nic: '934658539V',
+    email: 'tharushi@gmail.com',
+    number: '0717653459',
+    inputpw: '12345',
+    confirm: '12345',
+    gender: 'Female',
+  }); };
+
   const [value] = React.useState(1);
 
   return (
@@ -55,6 +69,7 @@ function Add_Student() {
 
           <Form
             layout="vertical"
+            form={form}
             name="signupStudent"
             onFinish={onFinish}
             validateMessages={validateMessages}
@@ -203,6 +218,8 @@ function Add_Student() {
               {/* </Link> */}
               &nbsp;
               <Button href="/AuthenticationManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
+              <br/>
+              <Button type="button" htmlType="button" class="btn btn-outline-secondary" onClick={onFill} style={{marginLeft:"40px", marginTop:"10px"}}>Demo</Button>
             </Form.Item>
           </Form>
         </div>

@@ -44,6 +44,20 @@ function Add_Supervisor() {
     }
   };
 
+
+  // Demo
+  const [form] = Form.useForm();
+  const onFill = () => { form.setFieldsValue({ 
+    name: 'Achila', 
+    name1: 'Rathnayaka', 
+    nic: '613966385V',
+    email: 'achila@gmail.com',
+    number: '0717653459',
+    inputpw: '12345',
+    confirm: '12345',
+    gender: 'Male',
+  }); };
+
   const [value] = React.useState(1);
 
   return (
@@ -55,6 +69,7 @@ function Add_Supervisor() {
 
           <Form
             layout="vertical"
+            form={form}
             name="signupSupervisor"
             onFinish={onFinish}
             validateMessages={validateMessages}
@@ -203,6 +218,8 @@ function Add_Supervisor() {
               {/* </Link> */}
               &nbsp;
               <Button href="/AuthenticationManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
+              <br/>
+              <Button type="button" htmlType="button" class="btn btn-outline-secondary" onClick={onFill} style={{marginLeft:"40px", marginTop:"10px"}}>Demo</Button>
             </Form.Item>
           </Form>
         </div>

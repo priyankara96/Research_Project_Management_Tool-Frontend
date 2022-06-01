@@ -44,6 +44,20 @@ function Add_CoSupervisor() {
     }
   };
 
+  
+  // Demo
+  const [form] = Form.useForm();
+  const onFill = () => { form.setFieldsValue({ 
+    name: 'Kasun', 
+    name1: 'Perera', 
+    nic: '785639638V',
+    email: 'kasun@gmail.com',
+    number: '0717653459',
+    inputpw: '12345',
+    confirm: '12345',
+    gender: 'Male',
+  }); };
+
   const [value] = React.useState(1);
 
   return (
@@ -55,6 +69,7 @@ function Add_CoSupervisor() {
 
           <Form
             layout="vertical"
+            form={form}
             name="signupCo-Supervisor"
             onFinish={onFinish}
             validateMessages={validateMessages}
@@ -202,7 +217,9 @@ function Add_CoSupervisor() {
               </Button>
               {/* </Link> */}
               &nbsp;
-              <Button href="/AuthenticationManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
+              <Button href="/AuthenticationManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button> 
+              <br/>
+              <Button type="button" htmlType="button" class="btn btn-outline-secondary" onClick={onFill} style={{marginLeft:"40px", marginTop:"10px"}}>Demo</Button>
             </Form.Item>
           </Form>
         </div>

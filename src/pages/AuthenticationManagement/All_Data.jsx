@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Button } from "antd";
+import * as AiIcons from 'react-icons/ai';
 import background from "../../images/background2.jpeg";
 
 const Alldata = props => ( 
@@ -88,6 +89,7 @@ export default class AlldatasList extends Component {
     render() {
         return ( 
             <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
+                <a href="/AuthenticationManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px", marginTop:"5px"}} > <AiIcons.AiOutlineHome /> </a>
             <div style={{marginLeft:"50px", marginRight:"50px", marginTop:"0px"}}>
                 <br/>
             <div className = "row" >
