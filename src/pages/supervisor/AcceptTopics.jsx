@@ -3,21 +3,19 @@ import { Form, Table, Button, Input, Modal } from "antd";
 import "antd/dist/antd.css";
 import Swal from "sweetalert2";
 import axios from "axios";
-import docsImg from "../../images/docs.png";
 import { ArrowRightOutlined, PlusOutlined } from "@ant-design/icons";
 
-export default function StudentSubmissionView() {
+export default function AcceptTopics() {
   const [loading, setLoading] = useState(true);
   const list = [];
   const [sublist, setSubList] = useState([]);
-  const [submissionList, setSubmissionList] = useState([]);
   const [data, setData] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [form] = Form.useForm();
 
   const showModal = async (values) => {
     console.log(values);
-    await setData(values);
+    setData(values);
     setIsModalVisible(true);
   };
 
@@ -29,47 +27,13 @@ export default function StudentSubmissionView() {
     setIsModalVisible(false);
   };
 
-  //fetch submissions
-  const fetchSubmissions = async () => {
-    setLoading(true);
-    try {
-      const result = await axios.get(`http://localhost:8000/submissions`);
-      if (result.status === 200) {
-        setSubmissionList(result.data);
-        for (var i = 0; i < result.data.length; i++) {
-          if (result.data[i].mark == null) {
-            list.push(result.data[i]);
-          }
-        }
-        setSubList(list);
-      }
-
-      setLoading(false);
-    } catch (e) {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchSubmissions();
-  }, []);
-
-  const onFinish = async (values) => {
-    try {
-      data.mark = values.mark;
-      const result = axios.put(
-        `http://localhost:8000/submission/${data._id}`,
-        data
-      );
-      console.log(data);
-      if (result) {
-        await Swal.fire("Mark Added Successfully !");
-        fetchSubmissions();
-        window.location.reload(true);
-      }
-    } catch (e) {
-      console.log("Error in adding mark ", e);
-    }
+  const layout = {
+    labelCol: {
+      span: 4,
+    },
+    wrapperCol: {
+      span: 16,
+    },
   };
 
   const columns = [
@@ -85,21 +49,14 @@ export default function StudentSubmissionView() {
       key: "groupID",
     },
     {
-      title: "Subject",
-      dataIndex: "subject",
-      key: "subject",
+      title: "Research Topic",
+      dataIndex: "researchTopic",
+      key: "researchTopic",
     },
     {
-      title: "Submitted File",
-      dataIndex: "submitURL",
-      key: "submitURL",
-      render: (text, record, index) => (
-        <React.Fragment key={index}>
-          <a href={`${record.submitURL}`}>
-            <img src={docsImg} className="documentImg"></img>
-          </a>
-        </React.Fragment>
-      ),
+      title: "Description",
+      dataIndex: "description",
+      key: "description",
     },
     {
       title: "Submitted Date and Time",
@@ -108,8 +65,8 @@ export default function StudentSubmissionView() {
     },
     {
       title: "Evaluate",
-      dataIndex: "marks",
-      key: "marks",
+      dataIndex: "accept",
+      key: "accept",
       render: (text, record, index) => (
         <React.Fragment key={index}>
           <Button
@@ -122,20 +79,54 @@ export default function StudentSubmissionView() {
     },
   ];
 
-  const layout = {
-    labelCol: {
-      span: 4,
-    },
-    wrapperCol: {
-      span: 16,
-    },
+  //fetch topics
+  const fetchTopics = async () => {
+    setLoading(true);
+    try {
+      const result = await axios.get(`http://localhost:8000/researchTopics`);
+      if (result.status === 200) {
+        for (var i = 0; i < result.data.length; i++) {
+          if (result.data[i].status == null) {
+            list.push(result.data[i]);
+          }
+        }
+        setSubList(list);
+      }
+
+      setLoading(false);
+    } catch (e) {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchTopics();
+  }, []);
+
+  const onFinish = async (values) => {
+    try {
+      data.status = values.status;
+      data.feedback = values.feedback;
+      const result = axios.put(
+        `http://localhost:8000/researchTopics/${data._id}`,
+        data
+      );
+      console.log(data);
+      if (result) {
+        await Swal.fire("Status Updated Successfully !");
+        fetchTopics();
+        window.location.reload(true);
+      }
+    } catch (e) {
+      console.log("Error in updating status ", e);
+    }
   };
 
   return (
     <div>
       <br />
       <center>
-        <h3>Student Submissions</h3>
+        <h3>Research Topic Evaluations</h3>
       </center>
       <br />
       <Table
@@ -143,7 +134,7 @@ export default function StudentSubmissionView() {
         dataSource={sublist}
         size="middle"
         pagination={false}
-        className="crsTable"
+        className="dataTable"
       />
 
       <Modal
@@ -152,8 +143,14 @@ export default function StudentSubmissionView() {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <h6>Group ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {data.groupID}</h6>
-        <h6>Subject &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {data.subject}</h6>
+        <h6>
+          Group ID
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" "}
+          {data.groupID}
+        </h6>
+        <h6>
+          Research Topic &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {data.researchTopic}
+        </h6>
 
         <br />
         <br />
@@ -166,8 +163,8 @@ export default function StudentSubmissionView() {
             onFinish={onFinish}
           >
             <Form.Item
-              name="mark"
-              label="Mark"
+              name="status"
+              label="Status"
               rules={[
                 {
                   required: true,
@@ -175,6 +172,17 @@ export default function StudentSubmissionView() {
               ]}
             >
               <Input />
+            </Form.Item>
+            <Form.Item
+              name="feedback"
+              label="Feedback"
+              rules={[
+                {
+                  required: true,
+                },
+              ]}
+            >
+              <Input.TextArea />
             </Form.Item>
             <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
               <Button type="primary" htmlType="submit">
@@ -187,9 +195,9 @@ export default function StudentSubmissionView() {
       <br />
       <br />
       <center>
-        <a href="/ViewStudentMarkList">
+        <a href="/TopicStatusList">
           <Button type="primary" icon={<ArrowRightOutlined />}>
-            Proceed To Student Marks Download
+            Proceed To Topic Evaluation Download
           </Button>
         </a>
       </center>

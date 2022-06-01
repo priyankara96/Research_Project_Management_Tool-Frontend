@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import uniqueRandom from "unique-random";
 import { Form, Input, Button, Modal, Search, Table } from "antd";
 import "antd/dist/antd.css";
 import Swal from "sweetalert2";
@@ -12,7 +11,6 @@ export default function StudentDetails() {
   const list = [];
   const [groupList, setGroupList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const random = uniqueRandom(1, 100);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [form] = Form.useForm();
 
@@ -27,7 +25,7 @@ export default function StudentDetails() {
 
   const showModal = async (values) => {
     console.log(values);
-    await setStudent(values);
+    setStudent(values);
     setIsModalVisible(true);
   };
 
@@ -39,7 +37,7 @@ export default function StudentDetails() {
     setIsModalVisible(false);
   };
 
-  //fectch student groups
+  //fectch student groups without group id
   const fetchStudentGroups = async () => {
     setLoading(true);
     try {
@@ -66,7 +64,7 @@ export default function StudentDetails() {
   }, []);
 
   //Adding Group ID
-  const onFinish = (values) => {
+  const onFinish = async (values) => {
     try {
       student.groupID = values.groupID;
       const result = axios.put(
@@ -75,7 +73,9 @@ export default function StudentDetails() {
       );
       console.log(student);
       if (result) {
-        Swal.fire("Group ID Added Successfully !");
+       await Swal.fire("Group ID Added Successfully !");
+        fetchStudentGroups();
+        window.location.reload(true);
       }
     } catch (e) {
       console.log("Error in adding group id ", e);

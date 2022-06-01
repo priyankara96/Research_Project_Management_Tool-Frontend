@@ -3,20 +3,18 @@ import axios from "axios";
 import { Table, Button, Input } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
 import { jsPDF } from "jspdf";
-import "./styles1.css";
 
-export default function StudentList() {
-  const [studentList, setStudentList] = useState([]);
+export default function ViewStudentMarkList() {
+  const [markList, setMarkList] = useState([]);
   const [loading, setLoading] = useState(true);
-  
 
   //fectch student lists
-  const fetchStudentGroups = async () => {
+  const fetchMarkList = async () => {
     setLoading(true);
     try {
-      const result = await axios.get(`http://localhost:8000/researchgroups`);
+      const result = await axios.get(`http://localhost:8000/submissions`);
       if (result.status === 200) {
-        setStudentList(result.data);
+        setMarkList(result.data);
       }
       console.log("Student group list ", result.data);
       setLoading(false);
@@ -26,7 +24,7 @@ export default function StudentList() {
   };
 
   useEffect(() => {
-    fetchStudentGroups();
+    fetchMarkList();
   }, []);
 
   const columns = [
@@ -42,24 +40,14 @@ export default function StudentList() {
       key: "groupID",
     },
     {
-      title: "Leader",
-      dataIndex: "leaderName",
-      key: "leaderName",
+      title: "Subject",
+      dataIndex: "subject",
+      key: "subject",
     },
     {
-      title: "Member 1",
-      dataIndex: "member1Name",
-      key: "member1Name",
-    },
-    {
-      title: "Member 2",
-      dataIndex: "member2Name",
-      key: "member2Name",
-    },
-    {
-      title: "Member 3",
-      dataIndex: "member3Name",
-      key: "member3Name",
+      title: "Evaluate",
+      dataIndex: "mark",
+      key: "mark",
     },
   ];
 
@@ -68,20 +56,15 @@ export default function StudentList() {
 
   const onSearch = (value) => {
     let result = [];
-    result = studentList.filter((data) => {
+    result = markList.filter((data) => {
       if (value == "") {
         window.location.reload(true);
         return data;
       } else {
-        return (
-          data.leaderName.toLowerCase().search(value) != -1 ||
-          data.member1Name.toLowerCase().search(value) != -1 ||
-          data.member2Name.toLowerCase().search(value) != -1 ||
-          data.member3Name.toLowerCase().search(value) != -1
-        );
+        return data.groupID.toLowerCase().search(value) != -1;
       }
     });
-    setStudentList(result);
+    setMarkList(result);
   };
 
   let doc;
@@ -93,9 +76,9 @@ export default function StudentList() {
       unit: "pt",
       format: [1700, 1000],
     });
-    doc.html(document.getElementById("downloadstdlist"), {
+    doc.html(document.getElementById("downloadMarkList"), {
       callback: function (pdf) {
-        pdf.save("Research-Project-Student-List.pdf");
+        pdf.save("Student Evaluations.pdf");
       },
     });
   };
@@ -112,15 +95,15 @@ export default function StudentList() {
       <br />
       <br />
 
-      <div id="downloadstdlist">
+      <div id="downloadMarkList">
         <center>
-          <h3>4th Year Research Project - Student Lists</h3>
+          <h3>4th Year Research Project - Student Evaluations</h3>
         </center>
         <br />
         <br />
         <Table
           columns={columns}
-          dataSource={studentList}
+          dataSource={markList}
           size="middle"
           pagination={false}
         />
@@ -128,14 +111,14 @@ export default function StudentList() {
       <br />
       <br />
       <center>
-      <Button
-        type="primary"
-        className="DownloadBtn"
-        icon={<DownloadOutlined />}
-        onClick={downloadPDF}
-      >
-        Download Student List
-      </Button>
+        <Button
+          type="primary"
+          className="DownloadBtn"
+          icon={<DownloadOutlined />}
+          onClick={downloadPDF}
+        >
+          Download Student Marks List
+        </Button>
       </center>
       <br />
       <br />
