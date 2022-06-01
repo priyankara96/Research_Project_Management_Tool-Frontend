@@ -133,6 +133,29 @@ export const SidebarItemsCoSupervisor = [
     
 ];
 
+// -------------------------------------------------------------------------  Panel Member
+export const SidebarItemsPanelMember = [
+    {
+        title: "My Profile",
+        path: "/profile",
+        icon: <FaIcons.FaUserCircle />,
+        className: "nav-text"
+    },
+    {
+        title: "My Courses",
+        path: "/MyCourses",
+        icon: <FaIcons.FaBook />,
+        className: "nav-text"
+    },
+    {
+        title: "Notices",
+        path: "/Notices",
+        icon: <IoIcons.IoMdNotifications />,
+        className: "nav-text"
+    }
+    
+];
+
 
 // -------------------------------------------------------------------------  Admin
 export const SidebarItemsAdmin = [
@@ -176,6 +199,30 @@ export const SidebarItemsAdmin = [
         path: "/AuthenticationReport",
         icon: <FaIcons.FaArrowAltCircleRight />,
         className: "nav-text"
+    },
+
+    {
+        title: "Notice Management",
+        path: "/admin",
+        className: "nav-text2"
+    },
+
+    {
+        title: "File Uploads",
+        path: "/Resources",
+        className: "nav-text2"
+    },
+
+    {
+        title: "Marking Scheme Creating",
+        path: "/marking",
+        className: "nav-text2"
+    },
+
+    {
+        title: "Research Group Management",
+        path: "/StudentDetails",
+        className: "nav-text2"
     },
 
     {

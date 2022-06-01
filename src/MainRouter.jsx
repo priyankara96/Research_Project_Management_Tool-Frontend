@@ -19,10 +19,12 @@ import Add_Student from "./pages/AuthenticationManagement/Add_Student";
 import Add_Lecturer from "./pages/AuthenticationManagement/Add_Lecturer";
 import Add_Supervisor from "./pages/AuthenticationManagement/Add_Supervisor";
 import Add_CoSupervisor from "./pages/AuthenticationManagement/Add_Co-Supervisor";
+import Add_PanelMember from "./pages/AuthenticationManagement/Add_PanelMember";
 import AuthenticationReport from "./pages/AuthenticationManagement/AuthenticationReport";
 
 import AdminDashboard from "./components/AdminDashboard";
 import SupervisorDashboard from "./components/SupervisorDashboard";
+import PanelMemberDashboard from "./components/PanelMemberDashboard";
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
 // Priyankara
@@ -99,10 +101,12 @@ export default class MainRouter extends Component {
               <Route path="/Add_Lecturer" exact component={Add_Lecturer} />
               <Route path="/Add_Supervisor" exact component={Add_Supervisor} />
               <Route path="/Add_Co-Supervisor" exact component={Add_CoSupervisor} />
+              <Route path="/Add_PanelMember" exact component={Add_PanelMember} />
               <Route path="/AuthenticationReport" exact component={AuthenticationReport} />
 
               <Route path="/AdminDashboard" exact component={AdminDashboard} />
               <Route path="/SupervisorDashboard" exact component={SupervisorDashboard} />
+              <Route path="/PanelMemberDashboard" exact component={PanelMemberDashboard} />
               <Route path="/AboutUs" exact component={AboutUs} />
               <Route path="/ContactUs" exact component={ContactUs} />
               {/* End - Priyankara */}

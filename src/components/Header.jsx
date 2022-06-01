@@ -5,6 +5,7 @@ import SliderStudent from "./SliderStudent";
 import AdminSlider from "./SliderAdmin";
 import SliderSupervisor from "./SliderSupervisor";
 import SliderCoSupervisor from "./SliderCoSupervisor";
+import SliderPanelMember from "./SliderPanelMember";
 import logo from "../images/CourseWeb.jpg";
 import useUser from "../services/UserContext";
 import { AiOutlineLogin } from "react-icons/ai";
@@ -168,6 +169,39 @@ function Header() {
 
             <ul className="pages">
               <a href="/SupervisorDashboard">
+                Home
+              </a>
+              <a href="/Notice">
+                Notice
+              </a>
+              <a href="/AdminUploads">
+                Resources
+              </a>
+              <a href="/AboutUs">
+                About
+              </a>
+              <a href="/ContactUs">
+                Contact Us
+              </a>
+              <a href="/Profile">
+                My Profile
+              </a>
+              <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px"}}><AiOutlineLogin />&nbsp; Logout</button>
+            </ul>
+          </div>
+        </div>
+      </>
+    );
+  } else if (user.role == "Panel Member") { //  ------------------- When there is a Panel Member login opportunity 
+    return (
+      <>
+        <div className="conatiner">
+          <div className="header">
+            <SliderPanelMember />
+            <a href="/PanelMemberDashboard"><img src={logo} alt="logo" className="logo" /></a>
+
+            <ul className="pages">
+              <a href="/PanelMemberDashboard">
                 Home
               </a>
               <a href="/Notice">

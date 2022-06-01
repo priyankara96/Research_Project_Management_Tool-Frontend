@@ -7,6 +7,7 @@ import Supervisor from "../../images/Supervisor.jpg";
 import CoSupervisor from "../../images/Co-Supervisor.jpg";
 import All from "../../images/All.jpg";
 import Report from "../../images/Report.png";
+import PanelMember from "../../images/panel.jpg";
 
 export default class MainDashboard extends Component {
 
@@ -100,11 +101,54 @@ export default class MainDashboard extends Component {
                     </Button>
                     </div>
                 </div>
-                </div> 
+                </div><br/><br/>
+
+
+
+<div class="container" style={{marginTop:"15px"}}>
+<div class="row hidden-md-up">
+        {/* 07 */}
+                <div class="col-md-4" >
+                <div class="card text-center" style = {{backgroundColor:'#dddddd'}}>
+                    <div class="card-block" ><br/>
+                    <img  style={{height: 130, width: 180}} class="rounded-circle" src={PanelMember} alt="Card image cap"/>
+                    <h4 class="card-title"></h4>                
+                    <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/Add_PanelMember" style={{ textDecoration: 'none', color: 'Info' }}>
+                        Add a new Panel Member </a>
+                    </Button>
+                    </div>
                 </div>
+                </div>
+        {/* 08 */}
+                {/* <div class="col-md-4" >
+                <div class="card text-center" style = {{backgroundColor:'#e5e3e3'}}>
+                    <div class="card-block" ><br/>
+                    <img  style={{height: 130, width: 180}} class="rounded-circle" src={08} alt="Card image cap"/>
+                    <h4 class="card-title"></h4>                
+                    <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="#" style={{ textDecoration: 'none', color: 'Info' }}>
+                        08 </a>
+                    </Button>
+                    </div>
+                </div>
+                </div> */}
+        {/* 09 */}
+                {/* <div class="col-md-4" >
+                <div class="card text-center" style = {{backgroundColor:'#e5e3e3'}}>
+                    <div class="card-block" ><br/>
+                    <img  style={{height: 130, width: 180}} class="rounded-circle" src={09} alt="Card image cap"/>
+                    <h4 class="card-title"></h4>                
+                    <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="#" style={{ textDecoration: 'none', color: 'Info' }}>
+                        09 </a>
+                    </Button>
+                    </div>
+                </div>
+                </div>  */}
 
 
-        
+
+        </div>
+        </div>
+        </div>
         </div>
         </div>
         </div>
