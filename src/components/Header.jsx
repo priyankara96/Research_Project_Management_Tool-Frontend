@@ -44,7 +44,7 @@ function Header() {
               <a href="/login">
                 My Courses
               </a>
-              <a href="/login">
+              <a href="/AdminUploads">
                 Resources
               </a>
               <a href="/login">
@@ -77,7 +77,7 @@ function Header() {
               <a href="/">
                 My Courses
               </a>
-              <a href="/">
+              <a href="/AdminUploads">
                 Resources
               </a>
               <a href="/">
@@ -110,7 +110,7 @@ function Header() {
               <a href="/">
                 My Courses
               </a>
-              <a href="/">
+              <a href="/AdminUploads">
                 Resources
               </a>
               <a href="/">
@@ -143,7 +143,7 @@ function Header() {
               <a href="/">
                 My Courses
               </a>
-              <a href="/">
+              <a href="/AdminUploads">
                 Resources
               </a>
               <a href="/">
@@ -176,7 +176,7 @@ function Header() {
               <a href="/">
                 My Courses
               </a>
-              <a href="/">
+              <a href="/AdminUploads">
                 Resources
               </a>
               <a href="/">
@@ -209,7 +209,7 @@ function Header() {
               <a href="/">
                 My Courses
               </a>
-              <a href="/">
+              <a href="/AdminUploads">
                 Resources
               </a>
               <a href="/">

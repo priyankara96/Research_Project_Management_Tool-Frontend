@@ -36,6 +36,10 @@ import GroupList from "./components/GroupList";
 import Video from "./components/Video";
 import AdminUpload from "./pages/admin/AdminUpload";
 import ViewAdminUpload from "./pages/admin/ViewAdminUpload";
+import CreateMarking from "./components/marking/CreateMarking";
+import MarkingHome from "./components/marking/MarkingHome";
+import EditMarkingPost from "./components/marking/EditMarking";
+import DownloadSchema from "./components/marking/DownloadSchema";
 // Chanduni
 
 // Nipuna
@@ -102,6 +106,10 @@ export default class MainRouter extends Component {
                   <Route path='/Video' exact component={Video}></Route>
                   <Route path='/Resources' exact component={AdminUpload}></Route>
                   <Route path='/AdminUploads' exact component={ViewAdminUpload}></Route>
+                  <Route path='/marking/add' exact component={CreateMarking}></Route>
+                  <Route path='/marking' exact component={MarkingHome}></Route>
+                  <Route path='/marking/edit/:id' exact component={EditMarkingPost}></Route>
+                  <Route path='/schema' exact component={DownloadSchema}></Route>
               {/* End - Chanduni */}
 
              {/* Nipuna */}

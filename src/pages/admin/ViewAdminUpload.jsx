@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import docImage from "../../images/document.png";
+import submission from "../../images/submissionfile.png";
 import { Table, Button, Input } from "antd";
 import "./styles1.css";
 import axios from "axios";
@@ -46,7 +46,7 @@ const columns = [
       key: "submitURL",
       render: (text, record, index) => (
         <React.Fragment key={index}>
-          <a href={`${record.submitURL}`}><img src={docImage} className="documentImg"></img></a>
+          <a href={`${record.submitURL}`}><img src={submission} className="documentImg"></img></a>
         </React.Fragment>
       ),
     },
@@ -58,7 +58,7 @@ const columns = [
   ];
 
   return (
-    <div>Admin Uploads
+    <div><h6> Note: Double click on file to download</h6>
         <br/><br/>
         <Table
         columns={columns}
