@@ -172,8 +172,8 @@ export const SidebarItemsAdmin = [
         className: "nav-text"
     },
     {
-        title: "Genarate Report",
-        path: "/",
+        title: "Generate Report",
+        path: "/AuthenticationReport",
         icon: <FaIcons.FaArrowAltCircleRight />,
         className: "nav-text"
     },

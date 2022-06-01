@@ -6,6 +6,7 @@ import Lecturer from "../../images/Lecturer.jpg";
 import Supervisor from "../../images/Supervisor.jpg";
 import CoSupervisor from "../../images/Co-Supervisor.jpg";
 import All from "../../images/All.jpg";
+import Report from "../../images/Report.png";
 
 export default class MainDashboard extends Component {
 
@@ -89,17 +90,17 @@ export default class MainDashboard extends Component {
                 </div>
                 </div>
         {/* 06 */}
-                {/* <div class="col-md-4" >
+                <div class="col-md-4" >
                 <div class="card text-center" style = {{backgroundColor:'#e5e3e3'}}>
                     <div class="card-block" ><br/>
-                    <img  style={{height: 130, width: 180}} class="rounded-circle" src={All} alt="Card image cap"/>
+                    <img  style={{height: 130, width: 180}} class="rounded-circle" src={Report} alt="Card image cap"/>
                     <h4 class="card-title"></h4>                
-                    <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/All_Data" style={{ textDecoration: 'none', color: 'Info' }}>
-                        Details of all Users </a>
+                    <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/AuthenticationReport" style={{ textDecoration: 'none', color: 'Info' }}>
+                        Generate Report </a>
                     </Button>
                     </div>
                 </div>
-                </div> */}
+                </div> 
                 </div>
 
 

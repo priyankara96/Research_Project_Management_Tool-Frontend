@@ -19,6 +19,7 @@ import Add_Student from "./pages/AuthenticationManagement/Add_Student";
 import Add_Lecturer from "./pages/AuthenticationManagement/Add_Lecturer";
 import Add_Supervisor from "./pages/AuthenticationManagement/Add_Supervisor";
 import Add_CoSupervisor from "./pages/AuthenticationManagement/Add_Co-Supervisor";
+import AuthenticationReport from "./pages/AuthenticationManagement/AuthenticationReport";
 
 import AdminDashboard from "./components/AdminDashboard";
 import SupervisorDashboard from "./components/SupervisorDashboard";
@@ -89,6 +90,7 @@ export default class MainRouter extends Component {
               <Route path="/Add_Lecturer" exact component={Add_Lecturer} />
               <Route path="/Add_Supervisor" exact component={Add_Supervisor} />
               <Route path="/Add_Co-Supervisor" exact component={Add_CoSupervisor} />
+              <Route path="/AuthenticationReport" exact component={AuthenticationReport} />
 
               <Route path="/AdminDashboard" exact component={AdminDashboard} />
               <Route path="/SupervisorDashboard" exact component={SupervisorDashboard} />

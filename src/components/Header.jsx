@@ -41,7 +41,7 @@ function Header() {
               <a href="/login">
                 Notice
               </a>
-              <a href="/AdminUploads">
+              <a href="/login">
                 Resources
               </a>
               <a href="/AboutUs">
