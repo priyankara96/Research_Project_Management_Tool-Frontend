@@ -4,6 +4,7 @@ import "./stylesSignup.css";
 import "antd/dist/antd.css";
 import swal from 'sweetalert';
 import useRequest from "../../services/RequestContext";
+import background from "../../images/background2.jpeg";
 import moment from "moment";
 
 function SignupStudent() {
@@ -47,7 +48,7 @@ function SignupStudent() {
 
   return (
     <>
-    <div className style={{ backgroundImage: 'url("")', backgroundSize: 'cover'}}>
+    <div className style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
       <div className="main-container-signup">
         <div className="form-common">
           <h1>Sign Up</h1>

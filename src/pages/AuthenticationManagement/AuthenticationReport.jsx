@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import jsPdf from 'jspdf'
 import 'jspdf-autotable'
+import background from "../../images/background2.jpeg";
 
 
 export default class UserList extends Component {
@@ -82,7 +83,7 @@ export default class UserList extends Component {
 
     render() {
         return ( 
-            
+            <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
             <div className = "container" >
             <br/>
             <div style = {{ float: 'none' }} >
@@ -109,6 +110,7 @@ export default class UserList extends Component {
             
             </div>
 
+            <form style={{backgroundColor: "#ffff"}}>
             <table class="table table-bordered table-white" id="my-pdf" >
             <thead className = "thead-light" >
             <tr>
@@ -142,9 +144,10 @@ export default class UserList extends Component {
 
             </tbody>
             </table>
-            
+            </form>
             
             <br/><br/><br/><br/>
+            </div>
             </div>
             
         )

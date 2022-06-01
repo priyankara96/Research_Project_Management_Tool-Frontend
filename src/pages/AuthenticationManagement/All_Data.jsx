@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Button } from "antd";
+import background from "../../images/background2.jpeg";
 
 const Alldata = props => ( 
     <tr >
-    <td > { props.alldata.name } </td> 
-    <td > { props.alldata.name1 } </td> 
-    <td > { props.alldata.birthday.substring(0, 10) } </td>
-    <td > { props.alldata.gender } </td>
-    <td > { props.alldata.nic } </td> 
-    <td > { props.alldata.email } </td> 
-    <td > { props.alldata.number } </td> 
-    <td > { props.alldata.role } </td> 
-    <td>
-    <a href = { "/alledit/" + props.alldata._id } onclick="window.location.reload(true)" > Edit </a> &nbsp; | &nbsp;
-    <a href = "/All_Data" style={{color:"red"}} onClick={() => { props.deleteAlldata(props.alldata._id) }}>Delete</a > 
-    </td> 
+        <td > { props.alldata.name } </td> 
+        <td > { props.alldata.name1 } </td> 
+        <td > { props.alldata.birthday.substring(0, 10) } </td>
+        <td > { props.alldata.gender } </td>
+        <td > { props.alldata.nic } </td> 
+        <td > { props.alldata.email } </td> 
+        <td > { props.alldata.number } </td> 
+        <td > { props.alldata.role } </td> 
+
+            <td>
+                <a href = { "/alledit/" + props.alldata._id } onclick="window.location.reload(true)" > Edit </a> &nbsp; | &nbsp;
+                <a href = "/All_Data" style={{color:"red"}} onClick={() => { props.deleteAlldata(props.alldata._id) }}>Delete</a > 
+            </td> 
     </tr>
 )
 
@@ -54,7 +56,7 @@ export default class AlldatasList extends Component {
 
     alldataList() {
         return this.state.alldataa.map(currentalldata => {
-            return <Alldata alldata = { currentalldata }
+            return < Alldata alldata = { currentalldata }
             deleteAlldata = { this.deleteAlldata }
             key = { currentalldata._id }
             />;
@@ -85,7 +87,7 @@ export default class AlldatasList extends Component {
 
     render() {
         return ( 
-            <>
+            <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
             <div style={{marginLeft:"50px", marginRight:"50px", marginTop:"0px"}}>
                 <br/>
             <div className = "row" >
@@ -106,28 +108,29 @@ export default class AlldatasList extends Component {
                     </div > 
             </div>
 
-
+            <form style={{backgroundColor: "#ffff"}}>
             <table className = "table">
-            <thead className = "thead-light" >
-            <tr>
-            <th> First Name </th> 
-            <th> Last Name </th> 
-            <th> Birth Day </th> 
-            <th> Gender </th> 
-            <th> NIC </th> 
-            <th> Email </th> 
-            <th> TP </th> 
-            <th> Role </th>
-            <th > Actions </th> 
-            </tr > 
-            </thead> 
+                <thead className = "thead-light" >
+                    <tr>
+                        <th> First Name </th> 
+                        <th> Last Name </th> 
+                        <th> Birth Day </th> 
+                        <th> Gender </th> 
+                        <th> NIC </th> 
+                        <th> Email </th> 
+                        <th> TP </th> 
+                        <th> Role </th>
+                        <th > Actions </th> 
+                    </tr > 
+                </thead> 
             <tbody > { this.alldataList() } 
             </tbody> 
-            <br/><br/><br/><br/><br/><br/><br/><br/>
             </table>
+            </form>
 
+            <br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
-            </>
+            </div>
         )
     }
 }

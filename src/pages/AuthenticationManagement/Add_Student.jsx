@@ -5,6 +5,7 @@ import "antd/dist/antd.css";
 import swal from 'sweetalert';
 import useRequest from "../../services/RequestContext";
 import moment from "moment";
+import background from "../../images/background2.jpeg";
 
 function Add_Student() {
   const layout = {
@@ -47,7 +48,7 @@ function Add_Student() {
 
   return (
     <>
-    <div className style={{ backgroundImage: 'url("")', backgroundSize: 'cover'}}>
+    <div className style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
       <div className="main-container-signup">
         <div className="form-common">
           <h1><h1>Add a new Student</h1></h1>
