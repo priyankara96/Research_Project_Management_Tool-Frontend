@@ -21,7 +21,7 @@ export default class UserList extends Component {
 
 
     retrievePosts() {
-        axios.get('http://localhost:8000/CommonSignup/')
+        axios.get('https://backend-research-tool.herokuapp.com/CommonSignup/')
             .then(response => {
                 this.setState({ user: response.data })
             })

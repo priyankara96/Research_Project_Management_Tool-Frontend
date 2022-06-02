@@ -33,7 +33,7 @@ export default class AlldatasList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8000/CommonSignup/')
+        axios.get('https://backend-research-tool.herokuapp.com/CommonSignup/')
             .then(response => {
                 this.setState({ alldataa: response.data })
             })

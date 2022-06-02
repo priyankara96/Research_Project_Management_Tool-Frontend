@@ -34,7 +34,7 @@ export default class All_Edit_Data extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8000/CommonSignup/' + this.props.match.params.id)
+        axios.get('https://backend-research-tool.herokuapp.com/CommonSignup/' + this.props.match.params.id)
             .then(response => {
                 this.setState({
                     name: response.data.name,
