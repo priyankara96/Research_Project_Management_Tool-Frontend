@@ -52,7 +52,7 @@ export default class All_Edit_Data extends Component {
                 console.log(error);
             })
 
-        axios.get('http://localhost:8000/CommonSignup/')
+        axios.get('https://backend-research-tool.herokuapp.com/CommonSignup/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -158,8 +158,9 @@ export default class All_Edit_Data extends Component {
             swal("Password invalid !", "length shuld be greater than 4", "error");
         } 
         else {
-
-        axios.put('http://localhost:8000/AllData/update/' + this.props.match.params.id, alldata)
+            
+        // axios.put('http://localhost:8000/AllData/update/' + this.props.match.params.id, alldata)
+        axios.put('https://backend-research-tool.herokuapp.com/AllData/update/' + this.props.match.params.id, alldata)
         .then(res => console.log(res.data));
         // alert("Edit Successfully")
         
