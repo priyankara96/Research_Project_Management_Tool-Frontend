@@ -82,7 +82,7 @@ import TopicStatusList from "./pages/supervisor/TopicStatusList";
 export default class MainRouter extends Component {
   render() {
     return (
-      <RequestContextProvider baseURL={"http://localhost:8000/"}>
+      <RequestContextProvider baseURL={"https://backend-research-tool.herokuapp.com/"}>
         <UserContextProvider>
           <BrowserRouter>
             <div style={{ backgroundColor: "#D0D3D4", margin: "0" }}>

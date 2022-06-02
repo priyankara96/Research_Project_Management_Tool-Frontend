@@ -2,9 +2,10 @@
   "name": "Research_Project_Management_Tool-Frontend",
   "version": "1.0.0",
   "description": "Web Application | 3rd year 1st semester Project | SLIIT",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
