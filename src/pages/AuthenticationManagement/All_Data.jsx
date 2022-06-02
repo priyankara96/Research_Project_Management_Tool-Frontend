@@ -45,7 +45,7 @@ export default class AlldatasList extends Component {
 
     deleteAlldata(id) {
         if (window.confirm('Are you sure?')) {
-            axios.delete('http://localhost:8000/CommonSignup/' + id)
+            axios.delete('https://backend-research-tool.herokuapp.com/CommonSignup/' + id)
                 .then(response => { console.log(response.data) });
 
             this.setState({
@@ -69,7 +69,7 @@ export default class AlldatasList extends Component {
 
         const searchKey = e.currentTarget.value;
 
-        axios.get('http://localhost:8000/CommonSignup/').then(response => {
+        axios.get('https://backend-research-tool.herokuapp.com/CommonSignup/').then(response => {
 
             const resultt = response.data
             const result = resultt.filter((props) =>
