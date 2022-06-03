@@ -13,7 +13,7 @@ export default function ViewAdminUpload() {
    const fetchUploads = async () => {
     setLoading(true);
     try {
-        const result = await axios.get(`http://localhost:8000/resources`);
+        const result = await axios.get(`https://backend-research-tool.herokuapp.com/resources`);
         if (result.status === 200) {
             setUploads(result.data);
         }

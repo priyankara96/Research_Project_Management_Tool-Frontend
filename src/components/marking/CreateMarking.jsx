@@ -68,7 +68,7 @@ export default class CreateMarking extends Component {
         "error"
       );
     } else {
-      axios.post("http://localhost:8000/marking/save", data).then((res) => {
+      axios.post("https://backend-research-tool.herokuapp.com/marking/save", data).then((res) => {
         if (res.data.success) {
           this.setState({
             groupID: "",
