@@ -18,7 +18,7 @@ componentDidMount(){
 }
 
 retrievePosts(){
-    axios.get("http://localhost:8000/admin").then(res =>{
+    axios.get("https://backend-research-tool.herokuapp.com/admin").then(res =>{
       if(res.data.success){
         this.setState({
           posts:res.data.existingPosts

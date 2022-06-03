@@ -32,7 +32,7 @@ export default function AdminUpload() {
     values.submitURL = upload;
     console.log(values);
     try {
-      const result = await axios.post("http://localhost:8000/resources/save", values);
+      const result = await axios.post("https://backend-research-tool.herokuapp.com/resources/save", values);
       if (result) {
         Swal.fire(
           "Successful!",

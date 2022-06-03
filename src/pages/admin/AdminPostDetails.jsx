@@ -12,7 +12,7 @@ export default class AdminPostDetails extends Component {
   componentDidMount(){
     const id =this.props.match.params.id;
 
-    axios.get(`http://localhost:8000/admin/${id}`).then((res)=>{
+    axios.get(`https://backend-research-tool.herokuapp.com/admin/${id}`).then((res)=>{
       if(res.data.success){
         this.setState({
           post:res.data.post

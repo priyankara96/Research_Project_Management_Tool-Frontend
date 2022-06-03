@@ -302,7 +302,7 @@ export default function CreateGroup() {
             </Button>
             <Button
               htmlType="button"
-              onClick={this.onFill}
+              onClick={onFill}
               className="resetBtn"
             >
               Demo
