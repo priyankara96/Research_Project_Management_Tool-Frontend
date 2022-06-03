@@ -40,7 +40,7 @@ export default function ViewGroup() {
     setLoading(true);
     try {
       const result = await axios.get(
-        `http://localhost:8000/researchgroup/${val}`
+        `https://backend-research-tool.herokuapp.com/researchgroup/${val}`
       );
 
       if (result.status === 200) {
@@ -66,7 +66,7 @@ export default function ViewGroup() {
   const onFinish = async (values) => {
     try {
       const result = await axios.put(
-        `http://localhost:8000/researchgroup/${data._id}`,
+        `https://backend-research-tool.herokuapp.com/researchgroup/${data._id}`,
         values
       );
       if (result) {
@@ -95,7 +95,7 @@ export default function ViewGroup() {
       }).then((result) => {
         if (result.isConfirmed) {
           const result = axios.delete(
-            `http://localhost:8000/researchgroup/${value}`
+            `https://backend-research-tool.herokuapp.com//${value}`
           );
           if (result) {
             Swal.fire("Deleted!", "Your Group has been deleted.", "success");

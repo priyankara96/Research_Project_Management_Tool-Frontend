@@ -12,7 +12,7 @@ export default function ViewStudentMarkList() {
   const fetchMarkList = async () => {
     setLoading(true);
     try {
-      const result = await axios.get(`http://localhost:8000/submissions`);
+      const result = await axios.get(`https://backend-research-tool.herokuapp.com/submissions`);
       if (result.status === 200) {
         setMarkList(result.data);
       }

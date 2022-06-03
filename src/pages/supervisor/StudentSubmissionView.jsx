@@ -33,7 +33,7 @@ export default function StudentSubmissionView() {
   const fetchSubmissions = async () => {
     setLoading(true);
     try {
-      const result = await axios.get(`http://localhost:8000/submissions`);
+      const result = await axios.get(`https://backend-research-tool.herokuapp.com/submissions`);
       if (result.status === 200) {
         setSubmissionList(result.data);
         for (var i = 0; i < result.data.length; i++) {
@@ -58,7 +58,7 @@ export default function StudentSubmissionView() {
     try {
       data.mark = values.mark;
       const result = axios.put(
-        `http://localhost:8000/submission/${data._id}`,
+        `https://backend-research-tool.herokuapp.com/submission/${data._id}`,
         data
       );
       console.log(data);

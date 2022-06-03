@@ -41,7 +41,7 @@ export default function StudentDetails() {
   const fetchStudentGroups = async () => {
     setLoading(true);
     try {
-      const result = await axios.get(`http://localhost:8000/researchgroups`);
+      const result = await axios.get(`https://backend-research-tool.herokuapp.com/researchgroups`);
       if (result.status === 200) {
         setStudentList(result.data);
         for (var i = 0; i < result.data.length; i++) {
@@ -68,7 +68,7 @@ export default function StudentDetails() {
     try {
       student.groupID = values.groupID;
       const result = axios.put(
-        `http://localhost:8000/researchgroup/${student._id}`,
+        `https://backend-research-tool.herokuapp.com/researchgroup/${student._id}`,
         student
       );
       console.log(student);

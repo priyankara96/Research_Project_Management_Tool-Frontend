@@ -13,7 +13,7 @@ export default function TopicStatusList() {
     const fetchTopics = async () => {
       setLoading(true);
       try {
-        const result = await axios.get(`http://localhost:8000/researchTopics`);
+        const result = await axios.get(`https://backend-research-tool.herokuapp.com/researchTopics`);
         if (result.status === 200) {
             setTopicList(result.data);
         }

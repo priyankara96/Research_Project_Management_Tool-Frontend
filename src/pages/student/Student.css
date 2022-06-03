@@ -168,16 +168,16 @@
   float: right;
   display: block;
   margin-right: 3%;
-  margin-top: 6%;
+  margin-top: 1%;
   border-radius: 20px;
 }
 .topicImg {
   display: block;
   margin-left: 2%;
-  margin-top: 5%;
+  margin-top: 8%;
   margin-right: 5px;
   width: 45%;
-  height: 58%;
+  height: 420px;
   border-radius: 20px;
   float: left;
 }

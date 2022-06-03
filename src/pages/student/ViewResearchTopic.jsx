@@ -39,7 +39,7 @@ export default function ViewResearchTopic() {
     setLoading(true);
     try {
       const result = await axios.get(
-        `http://localhost:8000/researchTopic/${val}`
+        `https://backend-research-tool.herokuapp.com/researchTopic/${val}`
       );
 
       if (result.status === 200) {
@@ -65,7 +65,7 @@ export default function ViewResearchTopic() {
   const onFinish = async (values) => {
     try {
       const result = await axios.put(
-        `http://localhost:8000/researchTopics/${data._id}`,
+        `https://backend-research-tool.herokuapp.com/researchTopics/${data._id}`,
         values
       );
       if (result) {
@@ -94,7 +94,7 @@ export default function ViewResearchTopic() {
       }).then((result) => {
         if (result.isConfirmed) {
           const result = axios.delete(
-            `http://localhost:8000/researchTopics/${value}`
+            `https://backend-research-tool.herokuapp.com/researchTopics/${value}`
           );
           if (result) {
             Swal.fire("Deleted!", "Your Topic has been deleted.", "success");
@@ -127,7 +127,7 @@ export default function ViewResearchTopic() {
           permission of supervisor/co-supervisor
         </h6>
       </center>
-      <img src={teamImg} className="topicImg"></img>
+      <img src={teamImg} className="topicImg"></img><br/><br/><br/><br/><br/><br/>
       <div className="topicContainer">
         {data && (
           <Form
