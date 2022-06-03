@@ -17,7 +17,7 @@ componentDidMount(){
 }
 
 retrievePosts(){
-    axios.get("http://localhost:8000/marking").then(res =>{
+    axios.get("https://backend-research-tool.herokuapp.com/marking").then(res =>{
       if(res.data.success){
         this.setState({
           posts:res.data.existingPosts
@@ -27,7 +27,7 @@ retrievePosts(){
     });
 }
 onDelete=(id)=>{
-    axios.delete(`http://localhost:8000/marking/delete/${id}`).then((res)=>{
+    axios.delete(`https://backend-research-tool.herokuapp.com/marking/delete/${id}`).then((res)=>{
       alert("Deleted Successful");
       this.retrievePosts();
     })
@@ -49,7 +49,7 @@ onDelete=(id)=>{
   handleSearchArea =(e) =>{
     const searchKey=e.currentTarget.value;
   
-    axios.get("http://localhost:8000/marking").then(res =>{
+    axios.get("https://backend-research-tool.herokuapp.com/marking").then(res =>{
       if(res.data.success){
   
         this.filterData(res.data.existingPosts,searchKey)

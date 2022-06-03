@@ -39,7 +39,7 @@ handleInputChange = (e) =>{
     if (topic == "" || body == "" || date == "" || other == "") {
       swal("Please fill the form correctly", "Form values cannot be empty", "error");
     }else{
-    axios.post("http://localhost:8000/admin/save",data).then((res) =>{
+    axios.post("https://backend-research-tool.herokuapp.com/admin/save",data).then((res) =>{
       if(res.data.success){
         this.setState(
           {

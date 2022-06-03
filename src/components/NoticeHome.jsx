@@ -28,7 +28,7 @@ retrievePosts(){
     });
 }
 onDelete=(id)=>{
-    axios.delete(`http://localhost:8000/admin/delete/${id}`).then((res)=>{
+    axios.delete(`https://backend-research-tool.herokuapp.com/admin/delete/${id}`).then((res)=>{
       alert("Deleted Successful");
       this.retrievePosts();
     })
@@ -47,7 +47,7 @@ onDelete=(id)=>{
   handleSearchArea =(e) =>{
     const searchKey=e.currentTarget.value;
   
-    axios.get("http://localhost:8000/admin").then(res =>{
+    axios.get("https://backend-research-tool.herokuapp.com/admin").then(res =>{
       if(res.data.success){
   
         this.filterData(res.data.existingPosts,searchKey)
