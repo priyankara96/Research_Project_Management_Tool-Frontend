@@ -10,6 +10,7 @@ import notices from '../images/notices.png';
 import teamimage from '../images/team-manage.jpg';
 import staff from '../images/staff.jpg';
 import panell from '../images/panell.jpg';
+import allocation from '../images/allocation.jpg';
 
 export default class MainDashboard extends Component {
 
@@ -129,7 +130,7 @@ export default class MainDashboard extends Component {
          <div class="col-md-3" >
            <div class="card text-center" style = {{backgroundColor:'#e5e3e3'}}>
              <div class="card-block" ><br/>
-             <img  style={{height: 130, width: 180}} class="rounded-circle" src={Feedback} alt="Card image cap"/>
+             <img  style={{height: 130, width: 180}} class="rounded-circle" src={allocation} alt="Card image cap"/>
                <h4 class="card-title"></h4>                
                <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/panelshedule" style={{ textDecoration: 'none', color: 'Info' }}>
                    Panel Allocation Management </a>
