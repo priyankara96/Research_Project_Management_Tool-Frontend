@@ -9,6 +9,7 @@ import All from "../../images/All.jpg";
 import Report from "../../images/Report.png";
 import PanelMember from "../../images/panel.jpg";
 
+// Main Admin Dashboard
 export default class MainDashboard extends Component {
 
   render() {

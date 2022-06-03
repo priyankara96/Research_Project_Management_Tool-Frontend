@@ -7,6 +7,7 @@ import useRequest from "../../services/RequestContext";
 import moment from "moment";
 import background from "../../images/background2.jpeg";
 
+// Create a new panel member
 function Add_PanelMember() {
   const layout = {
     labelCol: {

@@ -7,6 +7,7 @@ import useRequest from "../../services/RequestContext";
 import background from "../../images/background2.jpeg";
 import moment from "moment";
 
+// Student register in the system
 function SignupStudent() {
   const layout = {
     labelCol: {

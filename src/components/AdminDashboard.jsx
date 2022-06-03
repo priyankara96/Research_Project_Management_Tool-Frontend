@@ -125,20 +125,22 @@ export default class MainDashboard extends Component {
              </div>
            </div>
          </div>
+
+         </div><br/>
 {/* 09 */}
-<div class="row hidden-md-up">
-         <div class="col-md-3" >
+        <div class="row">
+        <div class="col-md-3" >
            <div class="card text-center" style = {{backgroundColor:'#e5e3e3'}}>
              <div class="card-block" ><br/>
              <img  style={{height: 130, width: 180}} class="rounded-circle" src={allocation} alt="Card image cap"/>
                <h4 class="card-title"></h4>                
                <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/panelshedule" style={{ textDecoration: 'none', color: 'Info' }}>
-                   Panel Allocation Management </a>
+                    Panel Allocation Management </a>
                </Button>
              </div>
            </div>
-         </div>
-        </div><br/>
+        </div>
+
 
         </div><br></br>
 

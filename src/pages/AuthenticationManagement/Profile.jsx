@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Form, Input, Button, Popconfirm, message } from "antd";
-//import { LockOutlined } from "@ant-design/icons";
 import './Profile.css'
 import 'antd/dist/antd.css';
 import useRequest from "../../services/RequestContext";
@@ -81,7 +80,7 @@ function Stdprofile() {
     }
   }, [user]);
 
-
+// update
   const onFinish = async values => {
     try {
       const result = await request.put(
@@ -100,6 +99,7 @@ function Stdprofile() {
     history.push('/Profile');
     window.location.reload(true);
   }
+  // delete
   const onDelete = async value => {
     try {
       const result = await request.delete(`CommonSignup/${value._id}`);

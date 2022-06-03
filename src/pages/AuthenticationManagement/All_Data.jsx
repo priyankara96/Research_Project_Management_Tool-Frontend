@@ -4,6 +4,7 @@ import { Button } from "antd";
 import * as AiIcons from 'react-icons/ai';
 import background from "../../images/background2.jpeg";
 
+// Show all users  data
 const Alldata = props => ( 
     <tr >
         <td > { props.alldata.name } </td> 

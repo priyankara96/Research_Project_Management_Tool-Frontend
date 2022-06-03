@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import swal from "sweetalert";
 
+// Update user details
 export default class All_Edit_Data extends Component {
     constructor(props) {
         super(props);

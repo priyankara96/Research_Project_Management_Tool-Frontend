@@ -5,7 +5,7 @@ import 'jspdf-autotable'
 import * as AiIcons from 'react-icons/ai';
 import background from "../../images/background2.jpeg";
 
-
+// Generate report - all users
 export default class UserList extends Component {
     constructor(props) {
         super(props);
@@ -33,7 +33,7 @@ export default class UserList extends Component {
 
     deleteUser(id) {
         if (window.confirm('Are you sure?')) {
-            axios.delete('http://localhost:8000/CommonSignup/' + id)
+            axios.delete('https://backend-research-tool.herokuapp.com/CommonSignup/' + id)
                 .then(response => { console.log(response.data) });
 
             this.setState({
@@ -47,7 +47,7 @@ export default class UserList extends Component {
 
         const searchKey = e.currentTarget.value;
 
-        axios.get('http://localhost:8000/CommonSignup/').then(response => {
+        axios.get('https://backend-research-tool.herokuapp.com/CommonSignup/').then(response => {
 
 
             const resultt = response.data
