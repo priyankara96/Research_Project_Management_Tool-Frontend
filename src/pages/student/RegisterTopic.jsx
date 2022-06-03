@@ -28,7 +28,7 @@ export default function RegisterTopic() {
   };
 
   //Demo button function
-  onFill = () => {
+  const onFill = () => {
     form.setFieldsValue({
       groupID: "Y4G002",
       researchTopic: "Robotics Aid in Elder Age",

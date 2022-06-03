@@ -91,7 +91,7 @@ export default function CreateGroup() {
   };
 
   //Demo button function
-  onFill = () => {
+ const onFill = () => {
     form.setFieldsValue({
       leaderName: "Chamindu Priyankara",
       leaderRegNo: "IT20245631",
