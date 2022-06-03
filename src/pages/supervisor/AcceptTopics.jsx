@@ -83,7 +83,7 @@ export default function AcceptTopics() {
   const fetchTopics = async () => {
     setLoading(true);
     try {
-      const result = await axios.get(`http://localhost:8000/researchTopics`);
+      const result = await axios.get(`https://backend-research-tool.herokuapp.com/researchTopics`);
       if (result.status === 200) {
         for (var i = 0; i < result.data.length; i++) {
           if (result.data[i].status == null) {
@@ -108,7 +108,7 @@ export default function AcceptTopics() {
       data.status = values.status;
       data.feedback = values.feedback;
       const result = axios.put(
-        `http://localhost:8000/researchTopics/${data._id}`,
+        `https://backend-research-tool.herokuapp.com/researchTopics/${data._id}`,
         data
       );
       console.log(data);

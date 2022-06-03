@@ -9,12 +9,11 @@ export default function StudentList() {
   const [studentList, setStudentList] = useState([]);
   const [loading, setLoading] = useState(true);
   
-
   //fectch student lists
   const fetchStudentGroups = async () => {
     setLoading(true);
     try {
-      const result = await axios.get(`http://localhost:8000/researchgroups`);
+      const result = await axios.get(`https://backend-research-tool.herokuapp.com/researchgroups`);
       if (result.status === 200) {
         setStudentList(result.data);
       }

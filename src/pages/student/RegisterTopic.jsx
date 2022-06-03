@@ -108,7 +108,7 @@ export default function RegisterTopic() {
         <h3 className="heading">Topic Registration</h3>
         <br />
 
-        <img src={teamImg} className="topicImg"></img>
+        <img src={teamImg} className="topicImg"></img><br/><br/><br/><br/><br/>
         <div className="groupContainer">
           <Form
             {...layout}

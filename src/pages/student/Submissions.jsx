@@ -24,7 +24,7 @@ export default function Submissions() {
     setLoading(true);
     try {
       const result = await axios.get(
-        `http://localhost:8000/mysubmission/${value}`
+        `https://backend-research-tool.herokuapp.com/mysubmission/${value}`
       );
       if (result.status === 200) {
         setSubmissionList(result.data);

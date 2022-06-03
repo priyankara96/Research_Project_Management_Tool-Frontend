@@ -117,7 +117,7 @@ export default function CreateGroup() {
   };
 
   return (
-    <div>
+    <div data-testid="create-group">
       <center>
         <br />
         <br />
