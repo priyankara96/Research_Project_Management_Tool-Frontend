@@ -136,7 +136,10 @@ onDelete=(id)=>{
         <br/>
        
       </table>
-      <button className=" btn btn-success" onClick={this.jsPdfGenerator}>Panel Allocation List</button>
+      <button className=" btn btn-success" onClick={this.jsPdfGenerator}>Download Panel Allocation List</button>
+      <br></br>
+       <br></br>
+        <br></br>
       </div>
     )
   }

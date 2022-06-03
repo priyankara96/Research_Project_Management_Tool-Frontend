@@ -116,7 +116,7 @@ class addpanel extends Component {
           
         
         </table>
-
+ <button className="btn btn-success"><a href="/staff/add" style={{textDecoration:'none',color:'white'}}>Add new Staff</a></button>
       </div>
     )
   }

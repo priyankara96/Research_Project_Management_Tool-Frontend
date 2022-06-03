@@ -122,7 +122,7 @@ onDelete=(id)=>{
         <h4>Downloadable Documentation</h4> </div>
         <br/>
         <img src={researchimage} className='imagesicons'/> &nbsp;<h5 style={{display: 'inline-block'}}> <a href="/schema" style={{textDecoration:'none', color:'black'}}>Marking Scheme</a></h5>  <br/>
-        <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/sheduletable" style={{textDecoration:'none', color:'black'}}>Panel Allocation</a></h5>  <br/>
+        <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/downloadshedule" style={{textDecoration:'none', color:'black'}}>Panel Allocation</a></h5>  <br/>
         <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/StudentList" style={{textDecoration:'none', color:'black'}}>Student List</a></h5>  <br/>
         <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/ViewStudentMarkList" style={{textDecoration:'none', color:'black'}}>Student Marks</a></h5>  <br/>
         <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/TopicStatusList" style={{textDecoration:'none', color:'black'}}>Research Topic Feedbacks</a></h5>  <br/>

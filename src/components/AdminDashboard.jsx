@@ -107,7 +107,7 @@ export default class MainDashboard extends Component {
              <div class="card-block" ><br/>
              <img  style={{height: 130, width: 180}} class="rounded-circle" src={staff} alt="Card image cap"/>
                <h4 class="card-title"></h4>                
-               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/staff/add" style={{ textDecoration: 'none', color: 'Info' }}>
+               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/Panel" style={{ textDecoration: 'none', color: 'Info' }}>
                    Staff Management </a>
                </Button>
              </div>
@@ -119,7 +119,7 @@ export default class MainDashboard extends Component {
              <div class="card-block" ><br/>
              <img  style={{height: 130, width: 180}} class="rounded-circle" src={panell} alt="Card image cap"/>
                <h4 class="card-title"></h4>                
-               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/addpanelmember" style={{ textDecoration: 'none', color: 'Info' }}>
+               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/paneltable" style={{ textDecoration: 'none', color: 'Info' }}>
                    Panel Member Management </a>
                </Button>
              </div>

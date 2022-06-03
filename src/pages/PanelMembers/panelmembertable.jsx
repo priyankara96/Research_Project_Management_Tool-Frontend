@@ -117,7 +117,7 @@ class panelmembertable extends Component {
           <br/>
           <br/>
           
-          <button className="ntn btn-success"><a href="/staff/add" style={{ textDecoration: 'none', color: 'white' }}>Add new </a></button>
+          <button className="btn btn-success"><a href="/addpanelmember" style={{textDecoration:'none',color:'white'}}>Add new Panel</a></button>
         </table>
 
       </div>
