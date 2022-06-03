@@ -48,7 +48,7 @@ export default class addpanelmember extends Component {
     }else{
 
       //save the entered data in db
-    axios.post("http://localhost:8000/panel/save",data).then((res) =>{
+    axios.post("https://backend-research-tool.herokuapp.com/panel/save",data).then((res) =>{
       if(res.data.success){
         this.setState(
           {
@@ -69,8 +69,14 @@ export default class addpanelmember extends Component {
   render() {
     return (
       //designing form to get user inputs
+
+      <div>
+      <div className> <br/>
         <div className="col-md-8 mt-4 mx-auto">
-          <h1 className="h3 mb-3 font-weight-normal">Add Panel Member </h1>
+          <h1 className="text-center" > <font face = "Comic sans MS" size ="6" > Add Panel Member  </font> </h1> 
+          <br/>
+        <div className="col-md-8 mt-4 mx-auto">
+          <h1 className="h3 mb-3 font-weight-normal"> </h1>
           <form className="needs-validation" noValidate>
             <div className="form-group" style={{marginBottom:'15px'}}>
               <label style={{marginBottom:'5px'}} >Panek Member</label>
@@ -133,9 +139,12 @@ export default class addpanelmember extends Component {
           </form>
           <br>
           </br>
-            <button className="ntn btn-success"><a href="/taxihome" style={{ textDecoration: 'none', color: 'white' }}> Mermber List</a></button>
+           
           
+       </div>
+        </div>
+        </div>
         </div>
     )
-  }
+   }
 }

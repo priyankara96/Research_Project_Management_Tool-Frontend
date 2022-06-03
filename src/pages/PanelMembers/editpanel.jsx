@@ -41,7 +41,7 @@ export default class editpanel extends Component{
     console.log(data)
 
     //updating the relevant data by retrieving existing data
-    axios.put(`http://localhost:8000/panel/update/${id}`,data).then((res) =>{
+    axios.put(`https://backend-research-tool.herokuapp.com/panel/update/${id}`,data).then((res) =>{
       if(res.data.success){
         alert("Post updated Successfully")
         this.setState(
@@ -60,7 +60,7 @@ export default class editpanel extends Component{
 
     const id = this.props.match.params.id;
 
-    axios.get(`http://localhost:8000/panel/${id}`).then((res) =>{
+    axios.get(`https://backend-research-tool.herokuapp.com/panel/${id}`).then((res) =>{
 
       if(res.data.success){
         this.setState({
@@ -81,8 +81,13 @@ export default class editpanel extends Component{
   render() {
     return (
       //designing form for updating
+        <div>
+      <div className> <br/>
         <div className="col-md-8 mt-4 mx-auto">
-          <h1 className="h3 mb-3 font-weight-normal">Add Panel Member </h1>
+          <h1 className="text-center" > <font face = "Comic sans MS" size ="6" > Edit Panel Member </font> </h1> 
+          <br/>
+        <div className="col-md-8 mt-4 mx-auto">
+          <h1 className="h3 mb-3 font-weight-normal"></h1>
           <form className="needs-validation" noValidate>
             <div className="form-group" style={{marginBottom:'15px'}}>
               <label style={{marginBottom:'5px'}} >Panek Member</label>
@@ -134,6 +139,9 @@ export default class editpanel extends Component{
           
           </form>
           
+        </div>
+        </div>
+        </div>
         </div>
     )
    }

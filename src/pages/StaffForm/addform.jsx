@@ -46,7 +46,7 @@ export default class addform extends Component {
     }else{
 
       //save the entered data in db
-    axios.post("http://localhost:8000/staff/save",data).then((res) =>{
+    axios.post("https://backend-research-tool.herokuapp.com/staff/save",data).then((res) =>{
       if(res.data.success){
         this.setState(
           {
@@ -69,8 +69,13 @@ export default class addform extends Component {
       
 
       //designing form to get user inputs
+       <div>
+      <div className> <br/>
         <div className="col-md-8 mt-4 mx-auto">
-          <h1 className="h3 mb-3 font-weight-normal">Add New </h1>
+          <h1 className="text-center" > <font face = "Comic sans MS" size ="6" > Add New  </font> </h1> 
+          <br/>
+        <div className="col-md-8 mt-4 mx-auto">
+          <h1 className="h3 mb-3 font-weight-normal"></h1>
           <form className="needs-validation" noValidate>
             <div className="form-group" style={{marginBottom:'15px'}}>
               <label style={{marginBottom:'5px'}} >Name</label>
@@ -124,9 +129,12 @@ export default class addform extends Component {
           </form>
           <br>
           </br>
-            <button className="ntn btn-success"><a href="/taxihome" style={{ textDecoration: 'none', color: 'white' }}>Taxi Ordered List</a></button>
           
+        <br/>
+          </div>
+        </div>
+        </div>
         </div>
     )
-  }
+   }
 }

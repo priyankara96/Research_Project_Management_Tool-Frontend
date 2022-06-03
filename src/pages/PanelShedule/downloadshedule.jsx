@@ -17,7 +17,7 @@ componentDidMount(){
 }
 
 retrievePosts(){
-    axios.get("http://localhost:8000/panelshedule").then(res =>{
+    axios.get("https://backend-research-tool.herokuapp.com/panelshedule").then(res =>{
       if(res.data.success){
         this.setState({
           posts:res.data.existingPosts
@@ -27,7 +27,7 @@ retrievePosts(){
     });
 }
 onDelete=(id)=>{
-    axios.delete(`http://localhost:8000/panelshedule/delete/${id}`).then((res)=>{
+    axios.delete(`https://backend-research-tool.herokuapp.com/panelshedule/delete/${id}`).then((res)=>{
       alert("Deleted Successful");
       this.retrievePosts();
     })
@@ -48,7 +48,7 @@ onDelete=(id)=>{
   handleSearchArea =(e) =>{
     const searchKey=e.currentTarget.value;
   
-    axios.get("http://localhost:8000/marking").then(res =>{
+    axios.get("https://backend-research-tool.herokuapp.com/marking").then(res =>{
       if(res.data.success){
   
         this.filterData(res.data.existingPosts,searchKey)
@@ -79,7 +79,7 @@ onDelete=(id)=>{
               <br/>
               <br/>
         <div className='text-center'>
-        <h1>Marking Schema</h1>
+        <h1>Panel Allocation List</h1>
         </div>
         <button  className="btn btn-success btnback">
           <i class="material-icons">navigate_before</i>

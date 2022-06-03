@@ -16,7 +16,7 @@ class panelmembertable extends Component {
 
   retrievePosts() {
     //retriving all entered information 
-    axios.get("http://localhost:8000/panel").then(res => {
+    axios.get("https://backend-research-tool.herokuapp.com/panel").then(res => {
       if (res.data.success) {
         this.setState({
           posts: res.data.existingPosts
@@ -28,7 +28,7 @@ class panelmembertable extends Component {
 
   onDelete = (id) => {
     //implementation of method deletion by specific id
-    axios.delete(`http://localhost:8000/panel/delete/${id}`).then((res) => {
+    axios.delete(`https://backend-research-tool.herokuapp.com/panel/delete/${id}`).then((res) => {
       alert("delete successfully");
       this.retrievePosts();
     })
@@ -102,7 +102,7 @@ class panelmembertable extends Component {
                   <td>
 
                     {/* button for update */}
-                    <a className="btn btn-warning" href={`staff/edit/${posts._id}`}>
+                    <a className="btn btn-warning" href={`/edit/panel/${posts._id}`}>
                       <i className="fas fa-edit"></i>&nbsp;Edit
                     </a>
                     &nbsp;

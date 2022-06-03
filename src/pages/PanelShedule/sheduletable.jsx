@@ -16,7 +16,7 @@ class sheduletable extends Component {
 
   retrievePosts() {
     //retriving all entered information 
-    axios.get("http://localhost:8000/panelshedule").then(res => {
+    axios.get("https://backend-research-tool.herokuapp.com/panelshedule").then(res => {
       if (res.data.success) {
         this.setState({
           posts: res.data.existingPosts
@@ -28,7 +28,7 @@ class sheduletable extends Component {
 
   onDelete = (id) => {
     //implementation of method deletion by specific id
-    axios.delete(`http://localhost:8000/panelshedule/delete/${id}`).then((res) => {
+    axios.delete(`https://backend-research-tool.herokuapp.com/panelshedule/delete/${id}`).then((res) => {
       alert("delete successfully");
       this.retrievePosts();
     })
@@ -120,7 +120,7 @@ class sheduletable extends Component {
           <br/>
           <br/>
           
-          <button className="ntn btn-success"><a href="/staff/add" style={{ textDecoration: 'none', color: 'white' }}>Add new </a></button>
+          
         </table>
 
       </div>

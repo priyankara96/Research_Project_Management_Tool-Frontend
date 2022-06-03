@@ -43,7 +43,7 @@ export default class editshedule extends Component{
     console.log(data)
 
     //updating the relevant data by retrieving existing data
-    axios.put(`http://localhost:8000/panelshedule/update/${id}`,data).then((res) =>{
+    axios.put(`https://backend-research-tool.herokuapp.com/panelshedule/update/${id}`,data).then((res) =>{
       if(res.data.success){
         alert("Post updated Successfully")
         this.setState(
@@ -63,7 +63,7 @@ export default class editshedule extends Component{
 
     const id = this.props.match.params.id;
 
-    axios.get(`http://localhost:8000/panelshedule/${id}`).then((res) =>{
+    axios.get(`https://backend-research-tool.herokuapp.com/panelshedule/${id}`).then((res) =>{
 
       if(res.data.success){
         this.setState({
@@ -84,8 +84,13 @@ export default class editshedule extends Component{
   render() {
     return (
       //designing form for updating
+       <div>
+      <div className> <br/>
         <div className="col-md-8 mt-4 mx-auto">
-          <h1 className="h3 mb-3 font-weight-normal">Edit Shedule</h1>
+          <h1 className="text-center" > <font face = "Comic sans MS" size ="6" > Edit Shedule</font> </h1> 
+          <br/>
+        <div className="col-md-8 mt-4 mx-auto">
+          <h1 className="h3 mb-3 font-weight-normal"></h1>
           <form className="needs-validation" noValidate>
             <div className="form-group" style={{marginBottom:'15px'}}>
               <label style={{marginBottom:'5px'}} >Group ID</label>
@@ -147,6 +152,10 @@ export default class editshedule extends Component{
           
           </form>
           
+           
+        </div>
+        </div>
+        </div>
         </div>
     )
    }
