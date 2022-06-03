@@ -151,7 +151,7 @@ export default function RegisterTopic() {
                 Reset
               </Button>
               &nbsp;&nbsp;
-              <Button htmlType="button" onClick={this.onFill}>
+              <Button htmlType="button" onClick={onFill}>
                 Demo
               </Button>
             </div>
