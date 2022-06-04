@@ -16,8 +16,17 @@ export default class ChatApp extends Component {
     }
   render() {
     return (
-      <div>ChatApp
-          
+      <div><h1>FAQ</h1>
+          <br/><br/>  <br/><br/>
+        <br/><br/>   <br/><br/>
+        <br/><br/>
+        <br/><br/>
+        <br/><br/>   <br/><br/>
+        <br/><br/>
+        <br/><br/>  
+        <br/><br/>   <br/><br/>
+       
+        <br/><br/>    
       </div>
     )
   }

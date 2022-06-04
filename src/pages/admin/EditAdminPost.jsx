@@ -86,7 +86,7 @@ export default class EditAdminPost extends Component {
     return (
    
       <div className='container'>
-      <h1 className="text-center">Add a Notice</h1>
+      <h1 className="text-center">Edit a Notice</h1>
     
       <button  className="btn btn-success btnback">
           <i class="material-icons">navigate_before</i>
