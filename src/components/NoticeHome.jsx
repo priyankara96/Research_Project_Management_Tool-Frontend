@@ -16,7 +16,7 @@ this.state={
 componentDidMount(){
     this.retrievePosts();
 }
-
+//retrieve posts
 retrievePosts(){
     axios.get("https://backend-research-tool.herokuapp.com/admin").then(res =>{
       if(res.data.success){
@@ -27,6 +27,7 @@ retrievePosts(){
       }
     });
 }
+//delete function
 onDelete=(id)=>{
     axios.delete(`https://backend-research-tool.herokuapp.com/admin/delete/${id}`).then((res)=>{
       alert("Deleted Successful");
@@ -34,6 +35,7 @@ onDelete=(id)=>{
     })
   }
 
+  //searching function
   filterData(posts,searchKey){
     const result =posts.filter((post)=>
     post.topic.toLowerCase().includes(searchKey)||

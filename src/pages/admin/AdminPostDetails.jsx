@@ -11,7 +11,7 @@ export default class AdminPostDetails extends Component {
   }
   componentDidMount(){
     const id =this.props.match.params.id;
-
+//get specific data corresponding to id
     axios.get(`https://backend-research-tool.herokuapp.com/admin/${id}`).then((res)=>{
       if(res.data.success){
         this.setState({
@@ -55,6 +55,12 @@ export default class AdminPostDetails extends Component {
              
               
             </dl>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             </div>
            
        
