@@ -57,6 +57,10 @@ export default class editshedule extends Component{
         )
       }
     })
+    .then ((value) => {
+    window.location= '/sheduletable';
+});
+
   }
   
   componentDidMount(){
@@ -145,10 +149,8 @@ export default class editshedule extends Component{
 
             <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.onSubmit}>
               <i className="far fa-check-square"></i>
-              &nbsp; Update
-                          
-              </button>
-          
+              &nbsp; Update</button>&nbsp;
+          <a href="/sheduletable"><button type="button" style={{marginTop:'15px'}} onClick={this.onClick} class="btn btn-warning"><i class="fa fa-close"></i>&nbsp;Cancel</button></a>
           
           </form>
           

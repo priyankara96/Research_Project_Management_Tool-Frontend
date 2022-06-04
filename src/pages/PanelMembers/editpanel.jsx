@@ -54,6 +54,9 @@ export default class editpanel extends Component{
         )
       }
     })
+    .then ((value) => {
+    window.location= '/paneltable';
+});
   }
   
   componentDidMount(){
@@ -132,9 +135,8 @@ export default class editpanel extends Component{
 
             <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.onSubmit}>
               <i className="far fa-check-square"></i>
-              &nbsp; Update
-                          
-              </button>
+              &nbsp; Update</button>&nbsp;
+            <a href="/paneltable"><button type="button" style={{marginTop:'15px'}} onClick={this.onClick} class="btn btn-warning"><i class="fa fa-close"></i>&nbsp;Cancel</button></a>
           
           
           </form>

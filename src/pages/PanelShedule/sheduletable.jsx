@@ -122,7 +122,9 @@ class sheduletable extends Component {
           
           
         </table>
-
+        <br></br>
+        <br></br>
+<button className="btn btn-success"><a href="/panelshedule" style={{textDecoration:'none',color:'white'}}>Add new </a></button>
       </div>
     )
   }
