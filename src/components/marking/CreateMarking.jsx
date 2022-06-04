@@ -29,6 +29,7 @@ export default class CreateMarking extends Component {
       [name]: value,
     });
   };
+  //data save on submit method
   onSubmit = (e) => {
     e.preventDefault();
 
@@ -60,7 +61,7 @@ export default class CreateMarking extends Component {
       Mark4: Mark4,
     };
     console.log(data);
-
+//validation
     if (groupID == "" || topic == "" || criteria == "") {
       swal(
         "Please fill the form correctly",
@@ -68,6 +69,7 @@ export default class CreateMarking extends Component {
         "error"
       );
     } else {
+      //data save
       axios.post("https://backend-research-tool.herokuapp.com/marking/save", data).then((res) => {
         if (res.data.success) {
           this.setState({
@@ -91,6 +93,7 @@ export default class CreateMarking extends Component {
       });
     }
   };
+  //demo button 
   demo = () => {
     //setState
     this.setState({

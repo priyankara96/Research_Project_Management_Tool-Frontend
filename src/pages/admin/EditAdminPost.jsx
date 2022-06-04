@@ -41,7 +41,7 @@ export default class EditAdminPost extends Component {
         }
     
         console.log(data)
-    
+    //update method
         axios.put(`https://backend-research-tool.herokuapp.com/admin/update/${id}`, data).then((res) => {
           if (res.data.success) {
             swal("Update Successful", "Update is recorder", "success");
@@ -61,7 +61,7 @@ export default class EditAdminPost extends Component {
       }
     
       componentDidMount() {
-    
+   //retrieve data correcsponding to id 
         const id = this.props.match.params.id;
     
         axios.get(`https://backend-research-tool.herokuapp.com/admin/${id}`).then((res) => {

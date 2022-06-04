@@ -35,10 +35,11 @@ handleInputChange = (e) =>{
       other:other
     }
     console.log(data);
-
+//validation
     if (topic == "" || body == "" || date == "" || other == "") {
       swal("Please fill the form correctly", "Form values cannot be empty", "error");
     }else{
+ //data save
     axios.post("https://backend-research-tool.herokuapp.com/admin/save",data).then((res) =>{
       if(res.data.success){
         this.setState(
@@ -58,6 +59,7 @@ handleInputChange = (e) =>{
   }
 
   }
+  //demo button
   demo =() => { 
 
     //setState

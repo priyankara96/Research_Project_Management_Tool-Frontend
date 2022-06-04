@@ -14,6 +14,7 @@ componentDidMount(){
     this.retrievePosts();
 }
 
+// retrieve posts
 retrievePosts(){
     axios.get("https://backend-research-tool.herokuapp.com/marking").then(res =>{
       if(res.data.success){
@@ -24,13 +25,14 @@ retrievePosts(){
       }
     });
 }
+//delete function
 onDelete=(id)=>{
     axios.delete(`https://backend-research-tool.herokuapp.com/marking/delete/${id}`).then((res)=>{
       alert("Deleted Successful");
       this.retrievePosts();
     })
   }
-
+//searching function
   filterData(posts,searchKey){
     const result =posts.filter((post)=>
     post.groupID.toLowerCase().includes(searchKey)||

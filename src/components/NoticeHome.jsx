@@ -16,7 +16,7 @@ this.state={
 componentDidMount(){
     this.retrievePosts();
 }
-
+//retrieve posts
 retrievePosts(){
     axios.get("https://backend-research-tool.herokuapp.com/admin").then(res =>{
       if(res.data.success){
@@ -27,6 +27,7 @@ retrievePosts(){
       }
     });
 }
+//delete function
 onDelete=(id)=>{
     axios.delete(`https://backend-research-tool.herokuapp.com/admin/delete/${id}`).then((res)=>{
       alert("Deleted Successful");
@@ -34,6 +35,7 @@ onDelete=(id)=>{
     })
   }
 
+  //searching function
   filterData(posts,searchKey){
     const result =posts.filter((post)=>
     post.topic.toLowerCase().includes(searchKey)||
@@ -115,7 +117,8 @@ onDelete=(id)=>{
         <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/CreateGroup" style={{textDecoration:'none', color:'info'}}>Group Registration</a></h5> <br/>
        <img src={researchimage} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/Video" style={{textDecoration:'none', color:'info'}}>Research Guide Line video</a></h5>  <br/>
        <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/RegisterTopic" style={{textDecoration:'none', color:'info'}}>Topic Registration</a></h5><br/>
-      <img src={researchimage} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/chat" style={{textDecoration:'none', color:'info'}}>FAQ</a></h5>  
+      <img src={researchimage} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/chat" style={{textDecoration:'none', color:'info'}}>FAQ</a></h5> <br/> 
+      <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/Mailer" style={{textDecoration:'none', color:'info'}}>Supervisor Co supervisor Request</a></h5> <br/>
   <hr/>
    
         <div className='general'>

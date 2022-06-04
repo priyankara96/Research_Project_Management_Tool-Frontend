@@ -68,7 +68,7 @@ export default class EditMarkingPost extends Component {
         }
     
         console.log(data)
-    
+    //update function
         axios.put(`https://backend-research-tool.herokuapp.com/marking/update/${id}`, data).then((res) => {
           if (res.data.success) {
             swal("Update Successful", "Update is recorder", "success");
@@ -94,7 +94,7 @@ export default class EditMarkingPost extends Component {
           }
         })
       }
-    
+    //retrieving existing data
       componentDidMount() {
     
         const id = this.props.match.params.id;
