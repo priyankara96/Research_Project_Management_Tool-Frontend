@@ -114,9 +114,9 @@ onDelete=(id)=>{
         <br/>
         <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/CreateGroup" style={{textDecoration:'none', color:'info'}}>Group Registration</a></h5> <br/>
        <img src={researchimage} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/Video" style={{textDecoration:'none', color:'info'}}>Research Guide Line video</a></h5>  <br/>
-       <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/RegisterTopic" style={{textDecoration:'none', color:'info'}}>Topic Registration</a></h5>
-        <hr/>
-  
+       <img src={logo} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/RegisterTopic" style={{textDecoration:'none', color:'info'}}>Topic Registration</a></h5><br/>
+      <img src={researchimage} className='imagesicons'/> &nbsp; <h5 style={{display: 'inline-block'}}> <a href="/chat" style={{textDecoration:'none', color:'info'}}>FAQ</a></h5>  
+  <hr/>
    
         <div className='general'>
         <h4>Downloadable Documentation</h4> </div>

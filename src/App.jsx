@@ -6,6 +6,7 @@ import Footer from "../src/components/Footer";
 import {  BrowserRouter as Router } from "react-router-dom";
 import { RequestContextProvider } from "./services/RequestContext";
 import { UserContextProvider } from "./services/UserContext";
+import ChatApp from "./components/ChatApp";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Router>
         <Header />
         <MainRouter /> 
+        <ChatApp/>
         <Footer />
       </Router>
       </UserContextProvider>

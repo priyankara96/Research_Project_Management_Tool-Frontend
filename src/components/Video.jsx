@@ -6,6 +6,11 @@ export default function Video() {
     <div>
         <h2>Research Guideline Video</h2>
         <ReactPlayer controls url='https://youtu.be/-JcgRyJUfZM'/>
+        <br/><br/>  <br/><br/>
+        <br/><br/>   <br/><br/>
+        <br/><br/>
+        <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>
+
     </div>
   )
 }
