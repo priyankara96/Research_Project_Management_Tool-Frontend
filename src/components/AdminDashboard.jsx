@@ -134,7 +134,7 @@ export default class MainDashboard extends Component {
              <div class="card-block" ><br/>
              <img  style={{height: 130, width: 180}} class="rounded-circle" src={allocation} alt="Card image cap"/>
                <h4 class="card-title"></h4>                
-               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/panelshedule" style={{ textDecoration: 'none', color: 'Info' }}>
+               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/sheduletable" style={{ textDecoration: 'none', color: 'Info' }}>
                     Panel Allocation Management </a>
                </Button>
              </div>

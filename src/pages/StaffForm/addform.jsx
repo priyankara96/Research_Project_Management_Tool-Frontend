@@ -41,8 +41,8 @@ export default class addform extends Component {
     console.log(data)
 
     //validation for recipe name
-    if(name.length<2){
-      swal("Enter valid  name", "error")
+    if(idd.length<2){
+      swal("Please fill the form correctly", "Form values cannot be empty", "error")
     }else{
 
       //save the entered data in db
