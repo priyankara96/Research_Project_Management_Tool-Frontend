@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/priyankara96/Research_Project_Management_Tool-Frontend#readme",
   "dependencies": {
-    "@ant-design/icons": "^4.7.0",
+    "@ant-design/icons": "^4.8.1",
     "antd": "^4.20.6",
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
